@@ -1,0 +1,11 @@
+# OS files
+.DS_Store
+Thumbs.db
+
+# Hostinger raw export & raw materials
+STRONA WWW NOWA!
+Home _ AI w muzyce - Futuropolis.html
+Home _ AI w muzyce - Futuropolis_files/
+
+# Temp files
+*.tmp
