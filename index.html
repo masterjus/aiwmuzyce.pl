@@ -109,7 +109,9 @@
   <header class="site-header" id="site-header">
     <div class="container nav-inner">
       <a href="#hero" class="nav-brand" aria-label="Futuropolis - Strona Główna">
-        <img src="assets/branding/futuropolis-logo.png" alt="Logo Futuropolis" class="nav-brand-img">
+        <div class="nav-brand-avatar">
+          <img src="assets/branding/favicon-face.png" alt="Logo Futuropolis" width="42" height="42">
+        </div>
         <div class="nav-brand-text">
           <span class="nav-brand-title">FUTUROPOLIS</span>
           <span class="nav-brand-subtitle">AI W MUZYCE • EDYCJA IV</span>
@@ -146,16 +148,16 @@
          Hero Section
          ========================================================================== -->
     <section class="hero" id="hero">
-      <!-- Fullscreen Cyber Shader Canvas (Drifting Neural Particles) -->
-      <canvas id="page-shader-canvas" aria-hidden="true"></canvas>
-
-      <!-- Background Video & Atmospheric Overlay -->
+      <!-- Background Video Layer -->
       <div class="hero-video-wrapper">
-        <video id="hero-bg-video" class="hero-video" autoplay muted loop playsinline poster="assets/branding/futuropolis-logo.png">
+        <video id="hero-bg-video" class="hero-video" autoplay muted loop playsinline>
           <source src="assets/video/hero-background.mp4" type="video/mp4">
         </video>
         <div class="hero-gradient-overlay"></div>
       </div>
+
+      <!-- Fullscreen Cyber Shader Canvas (Drifting Neural Particles) -->
+      <canvas id="page-shader-canvas" aria-hidden="true"></canvas>
 
       <!-- Real-time Cybernetic Audio Wave Visualizer Canvas -->
       <canvas id="audio-visualizer-canvas" aria-hidden="true"></canvas>
