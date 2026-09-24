@@ -352,68 +352,47 @@ button {
 }
 
 .nav-brand {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   gap: 12px;
   flex-shrink: 0;
+  text-decoration: none;
 }
 
-.nav-brand-avatar {
-  width: 42px;
-  height: 42px;
-  border-radius: 50%;
-  overflow: hidden;
-  border: 1.5px solid var(--neon-cyan);
-  box-shadow: 0 0 14px rgba(0, 240, 255, 0.4);
-  flex-shrink: 0;
-  background: var(--bg-surface);
-  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
-}
-
-.nav-brand-avatar img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-
-.nav-brand-img {
-  max-height: 38px;
+.nav-brand-wordmark {
+  height: 24px;
   width: auto;
+  max-width: 250px;
   object-fit: contain;
+  display: block;
+  filter: drop-shadow(0 0 10px rgba(0, 240, 255, 0.4));
+  transition: transform var(--transition-fast), filter var(--transition-fast);
 }
 
-.nav-brand:hover .nav-brand-avatar {
-  transform: scale(1.08) rotate(3deg);
-  box-shadow: 0 0 25px rgba(0, 240, 255, 0.7);
+.nav-brand:hover .nav-brand-wordmark {
+  transform: scale(1.03);
+  filter: drop-shadow(0 0 18px rgba(0, 240, 255, 0.75));
 }
 
-.nav-brand-text {
-  display: flex;
-  flex-direction: column;
-  line-height: 1.15;
-}
-
-.nav-brand-title {
-  font-size: 1.15rem;
-  font-weight: 800;
-  color: var(--text-bright);
-  letter-spacing: 0.05em;
-  font-family: var(--font-heading);
-}
-
-.nav-brand-subtitle {
-  font-size: 0.68rem;
+.nav-brand-badge {
+  display: inline-block;
   font-family: var(--font-mono);
+  font-size: 0.65rem;
+  font-weight: 700;
   color: var(--neon-cyan);
-  letter-spacing: 0.12em;
+  padding: 2px 7px;
+  background: rgba(0, 240, 255, 0.08);
+  border: 1px solid rgba(0, 240, 255, 0.3);
+  border-radius: var(--radius-sm);
+  letter-spacing: 0.1em;
   text-transform: uppercase;
+  white-space: nowrap;
 }
 
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 18px;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -2487,6 +2466,21 @@ dialog.gallery-modal::backdrop {
 /* ==========================================================================
    Responsive Adaptations
    ========================================================================== */
+@media (max-width: 1200px) {
+  .nav-links {
+    gap: 13px;
+  }
+  .nav-link {
+    font-size: 0.84rem;
+  }
+  .nav-brand-wordmark {
+    height: 20px;
+  }
+  .nav-brand-badge {
+    display: none;
+  }
+}
+
 @media (max-width: 1024px) {
   .hero-grid-split {
     grid-template-columns: 1fr;
@@ -2528,7 +2522,7 @@ dialog.gallery-modal::backdrop {
   }
 }
 
-@media (max-width: 960px) {
+@media (max-width: 992px) {
   .nav-links {
     display: none;
   }
