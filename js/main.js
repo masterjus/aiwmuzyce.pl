@@ -227,7 +227,7 @@ const speakersData = {
   'gniewomir-tomczyk': {
     name: 'Gniewomir Tomczyk',
     role: 'Inicjator Futuropolis / Perkusista, kompozytor, producent',
-    topic: 'Możliwości wykorzystania AI w pracy artystycznej, dydaktycznej oraz koncertowej',
+    topic: 'Możliwości wykorzystania AI w pracy artystycznej, dydaktycznej oraz koncertowej (pokaz na żywo)',
     badge: 'Artysta & Dyrektor',
     img: 'assets/speakers/Gniewomir Tomczyk.jpg',
     bio: 'Perkusista, kompozytor, producent i pedagog, inicjator projektu Futuropolis rozwijanego od 2023 roku w obszarze AI w muzyce. Autor autorskich albumów muzycznych, od 2024 roku wiceprezes Polskiego Stowarzyszenia Jazzowego. W projekcie Futuropolis łączy perkusję akustyczną i hybrydową z generatywnymi algorytmami AI oraz przetwarzaniem sygnału w czasie rzeczywistym.'
@@ -251,7 +251,7 @@ const speakersData = {
   'natalia-kordiak': {
     name: 'Natalia Kordiak',
     role: 'Wokalistka jazzowa, improwizatorka, kompozytorka',
-    topic: 'Twórca, improwizacja, własny język, indywidualność i autentyczność wobec AI',
+    topic: 'Twórca, improwizacja, własny język, indywidualność i autentyczność',
     badge: 'Wokal & Improwizacja',
     img: 'assets/speakers/Natalia Kordiak.jpg',
     bio: 'Wokalistka i improwizatorka traktująca ludzki głos jako pole do radykalnych eksperymentów brzmieniowych. Liderka Natalia Kordiak Quintet, z którym zrealizowała nominowany do Fryderyka album „Bajka”. Jej prelekcja zgłębia ludzki błąd, emocje i organiczną spontaniczność głosu w zderzeniu z przewidywalną doskonałością algorytmów.'
@@ -259,7 +259,7 @@ const speakersData = {
   'bartozzi-wojciechowski': {
     name: 'Bartozzi Wojciechowski',
     role: 'Basista, kompozytor, producent, pedagog',
-    topic: 'Twórczość współczesna / technologia / nowe sposoby pracy artysty',
+    topic: 'Rewolucja w formie cyfryzacji światowego rynku muzyki, rys historyczny i znaczenie dla powstania AI',
     badge: 'Scena & Studio',
     img: 'assets/speakers/Bartozzi Wojciechowski.jpg',
     bio: 'Wszechstronny basista i producent łączący jazz, funk i muzykę eksperymentalną. Współpracował m.in. z Tomaszem Stańką, Marysią Sadowską, Anitą Lipnicką i Wojciechem Konikiewiczem. Eksploruje nowe techniki pracy artysty z narzędziami cyfrowymi i urządzeniami hybrydowymi.'
@@ -275,7 +275,7 @@ const speakersData = {
   'mateusz-modrzejewski': {
     name: 'dr inż. Mateusz Modrzejewski',
     role: 'Naukowiec Politechniki Warszawskiej, perkusista (b. Apple Music ML)',
-    topic: 'AI i uczenie maszynowe w muzyce: algorytmy, analiza i wykonawstwo',
+    topic: 'AI i uczenie maszynowe w muzyce',
     badge: 'Nauka & Perkusja',
     img: 'assets/speakers/Mateusz Modrzejewski.jpg',
     bio: 'Naukowiec i inżynier w Instytucie Informatyki Politechniki Warszawskiej oraz aktywny perkusista z dorobkiem ponad 600 koncertów. Doświadczenie zdobywał m.in. w zespole Music Machine Learning w Apple Music. Łączy ścisłą wiedzę z zakresu sieci neuronowych i przetwarzania sygnału z praktyką koncertową.'
@@ -283,7 +283,7 @@ const speakersData = {
   'dariusz-makaruk': {
     name: 'Dariusz Makaruk',
     role: 'Kompozytor muzyki elektronicznej, artysta multimedialny',
-    topic: 'AI, eksperyment, sztuka cyfrowa, nowe sposoby tworzenia i immersji',
+    topic: 'AI, eksperyment, sztuka cyfrowa, nowe sposoby tworzenia',
     badge: 'Sztuka Nowych Mediów',
     img: 'assets/speakers/Dariusz Makaruk.webp',
     bio: 'Kompozytor, producent muzyki elektronicznej i artysta multimedialny łączący dźwięk z nowymi technologiami, sztuką VR i instalacjami interaktywnymi. Członek Polskiego Stowarzyszenia Muzyki Elektroakustycznej, laureat międzynarodowych nagród w dziedzinie sztuki cyfrowej.'
@@ -291,15 +291,15 @@ const speakersData = {
   'david-sypniewski': {
     name: 'David Sypniewski',
     role: 'Kierownik Zakładu Sztucznej Inteligencji Uniwersytetu SWPS',
-    topic: 'Obraz / robotyka / nowe media: „Jak zaprojektowałem Bota, który nie jest moją zmarłą matką”',
+    topic: 'Jak zaprojektowałem bota, który nie jest moją zmarłą matką',
     badge: 'Projektowanie & Etyka',
     img: 'assets/speakers/David Sypniewski.webp',
-    bio: 'Projektant, wykładowca Uniwersytetu SWPS i badacz interakcji człowiek–technologia. Kieruje Zakładem Sztucznej Inteligencji oraz Otwartą Pracownią AI na Wydziale Projektowania. Zajmuje się generatywnym kodem, robotyką oraz humanistycznymi aspektami wykorzystania systemów autonomicznych.'
+    bio: 'Projektant, wykładowca Uniwersytetu SWPS i badacz interakcji człowiek–technologia. Kieruje Zakładem Sztucznej Inteligencji oraz Otwartą Pracownią AI na Wydziale Projektowania. Zajmuje się generatywnym kodem, robotyką oraz humanistycznymi aspektami wykorzystania systemów autonomicznych. Wideo projektu: https://youtu.be/nVUn74SftWs?si=RmjqDVQPrK5dZtIu'
   },
   'sylwia-wiewiorka-zyga': {
     name: 'Sylwia Wiewiórka-Zyga',
     role: 'Radca prawny, ekspertka prawa własności intelektualnej',
-    topic: 'Prawo autorskie w erze AI: trening modeli, autorstwo promptów, tantiemy',
+    topic: 'Prawo autorskie w erze AI',
     badge: 'Prawo Autorskie',
     img: 'assets/speakers/Sylwia Wiewiórka Zyga.jpg',
     bio: 'Radca prawny specjalizująca się w prawie własności intelektualnej, mediów i nowych technologii. Członkini Komisji Prawa Autorskiego X kadencji. Doradza artystom, wydawnictwom muzycznym oraz producentom filmowym, wyjaśniając złożone zagadnienia prawne generatywnej sztucznej inteligencji.'
@@ -307,7 +307,7 @@ const speakersData = {
   'mariusz-misiek': {
     name: 'Mariusz Misiek',
     role: 'Head of AI w x-kom, ekspert technologii',
-    topic: 'SUNO / Czy AI stało się producentem muzycznym? Narzędzia komercyjne',
+    topic: 'SUNO / Czy AI stało się już producentem muzycznym?',
     badge: 'Biznes & Modele Audio',
     img: 'assets/speakers/Mariusz Misiek.jpg',
     bio: 'Ekspert nowych technologii z ponad 25-letnim doświadczeniem w branży IT. Jako Head of AI w x-kom bada i wdraża systemy agentowe, modele generatywne oraz automatyzację. W muzyce testuje granice autonomii kompozytorskiej silników takich jak Suno czy Udio.'
@@ -315,7 +315,7 @@ const speakersData = {
   'tomasz-wroblewski': {
     name: 'Tomasz Wróblewski',
     role: 'Twórca 0dB.pl, b. redaktor naczelny „Estrada i Studio”',
-    topic: 'Czy AI zmienia tylko narzędzia w studiu, czy również proces twórczy?',
+    topic: 'Czy AI zmienia tylko narzędzia, czy także proces twórczy?',
     badge: 'Produkcja Muzyczna',
     img: 'assets/speakers/Tomasz Wróblewski.jpg',
     bio: 'Realizator dźwięku, inżynier elektroniki, producent i edukator. Przez blisko 25 lat redaktor naczelny wiodącego pisma producentów dźwięku „Estrada i Studio”. Założyciel opiniotwórczego portalu i kanału wideo 0dB.pl, autorytet w dziedzinie sprzętu i oprogramowania audio.'
@@ -323,7 +323,7 @@ const speakersData = {
   'atanas-valkov': {
     name: 'Atanas Valkov',
     role: 'Kompozytor muzyki filmowej i gier, pianista, producent',
-    topic: 'Piano Odyseja: Fortepian akustyczny, synteza modularna i DSP Neutone',
+    topic: 'Piano Odyseja',
     badge: 'Film & Gaming',
     img: 'assets/speakers/Atanas Valkov.jpg',
     bio: 'Polsko-bułgarski kompozytor i multiinstrumentalista, laureat głównej nagrody Berlinale Film Score Award. Autor muzyki do głośnych filmów i seriali (m.in. „Belfer”, „Legendy Polskie Allegro”). W autorskim projekcie „Piano Odyseja” integruje klasyczny fortepian z zaawansowanymi modelami AI.'
@@ -331,7 +331,7 @@ const speakersData = {
   'krzysztof-cybulski': {
     name: 'dr Krzysztof Cybulski',
     role: 'Artysta dźwiękowy, panGenerator, UMFC',
-    topic: 'AI a sztuka generatywna / Sprawczość, interpretowalność, namacalność',
+    topic: 'AI i sztuka generatywna',
     badge: 'Instrumenty Hybrydowe',
     img: 'assets/speakers/Krzysztof Cybulski.webp',
     bio: 'Muzyk, artysta dźwiękowy i konstruktor autorskich instrumentów hybrydowych. Współzałożyciel grupy panGenerator, laureat Paszportu Polityki, zdobywca prestiżowej Margaret Guthman Musical Instrument Competition w USA oraz wyróżnienia Prix Ars Electronica.'
