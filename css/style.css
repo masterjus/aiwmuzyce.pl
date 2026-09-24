@@ -288,12 +288,14 @@ html, body, .site-header, .hud-telemetry-bar, .act-card, .speaker-card, .pillar-
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 110px;
+  scroll-padding-top: 80px;
   font-size: 16px;
   background-color: var(--bg-void);
   color: var(--text-main);
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+  max-width: 100%;
 }
 
 body {
@@ -302,6 +304,8 @@ body {
   background-color: var(--bg-void);
   color: var(--text-main);
   overflow-x: hidden;
+  max-width: 100%;
+  width: 100%;
   position: relative;
 }
 
@@ -2787,15 +2791,29 @@ dialog.gallery-modal::backdrop {
     display: flex;
     flex-direction: column;
     position: fixed;
-    top: 70px;
+    top: 60px;
     left: 0;
     right: 0;
     background: rgba(3, 4, 7, 0.98);
     backdrop-filter: blur(24px);
-    padding: 30px;
+    -webkit-backdrop-filter: blur(24px);
+    padding: 24px 20px;
     border-bottom: 1px solid var(--border-glass);
-    gap: 20px;
+    gap: 18px;
     z-index: 999;
+    max-height: calc(100vh - 60px);
+    overflow-y: auto;
+  }
+  [data-theme="light"] .nav-links.mobile-open {
+    background: rgba(255, 255, 255, 0.98);
+    border-bottom-color: var(--border-glass);
+  }
+  [data-theme="light"] .nav-links.mobile-open .nav-link {
+    color: var(--text-main);
+  }
+  [data-theme="light"] .nav-links.mobile-open .nav-link:hover,
+  [data-theme="light"] .nav-links.mobile-open .nav-link.active {
+    color: var(--neon-cyan);
   }
   .mobile-menu-btn {
     display: block;
@@ -2806,14 +2824,97 @@ dialog.gallery-modal::backdrop {
   .hud-telemetry-bar {
     display: none;
   }
+  .site-header {
+    padding: 10px 0;
+  }
+  .site-header.scrolled {
+    padding: 8px 0;
+  }
+  .nav-inner {
+    gap: 12px;
+  }
+  .nav-brand-wordmark {
+    height: 20px;
+    max-width: 175px;
+  }
+  .site-header .btn-ticket-hud {
+    display: none; /* Accessible in Hero CTA & Mobile Menu */
+  }
+  .nav-actions {
+    gap: 10px;
+  }
+
+  /* Section Spacing on Tablets & Phones */
+  .section-about,
+  .section-agenda,
+  .section-speakers,
+  .section-concert-spotlight,
+  .section-gallery,
+  .section-tickets,
+  .section-venue,
+  .section-faq,
+  .section-contact {
+    padding: 65px 0;
+  }
+  .section-center {
+    margin-bottom: 36px;
+  }
+  .section-title {
+    font-size: clamp(1.8rem, 6.5vw, 2.4rem);
+  }
+  .section-desc {
+    font-size: 0.98rem;
+    line-height: 1.6;
+  }
+
+  /* Stats Banner */
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+  .stat-item {
+    padding: 14px 10px;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-sm);
+  }
+  .stat-item::after {
+    display: none !important;
+  }
+  .stat-number {
+    font-size: 2.1rem;
+    margin-bottom: 4px;
+  }
+  .stat-label {
+    font-size: 0.8rem;
+  }
+
+  /* About Narrative */
+  .about-narrative {
+    padding: 28px 20px;
+    gap: 28px;
+  }
+  .narrative-title {
+    font-size: 1.55rem;
+  }
+  .narrative-img-box img {
+    height: 240px;
+  }
+  .narrative-badge {
+    position: static;
+    margin-top: 14px;
+    padding: 14px 16px;
+  }
+
+  /* Agenda Timeline */
   .acts-timeline-wrapper {
-    padding-left: 24px;
+    padding-left: 20px;
   }
   .acts-timeline-rail {
     left: 4px;
   }
   .act-card::before {
-    left: -24px;
+    left: -20px;
   }
   .act-header-left {
     flex-direction: column;
@@ -2824,20 +2925,551 @@ dialog.gallery-modal::backdrop {
     grid-template-columns: 1fr;
     gap: 6px;
   }
+
+  /* Concert Spotlight */
+  .concert-card-featured {
+    padding: 30px 20px;
+    gap: 30px;
+  }
+  .concert-title {
+    font-size: clamp(1.8rem, 6vw, 2.4rem);
+  }
+  .concert-desc {
+    font-size: 0.98rem;
+    line-height: 1.65;
+  }
+  .concert-features-list {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    margin-bottom: 28px;
+  }
+  .concert-graphic-glow {
+    width: 240px;
+    height: 240px;
+  }
+  .concert-graphic-img {
+    max-height: 260px;
+  }
+
+  /* Venue Card */
+  .venue-card {
+    padding: 28px 20px;
+    gap: 28px;
+  }
+  .venue-name {
+    font-size: 1.8rem;
+  }
+  .venue-map-wrapper {
+    min-height: 260px;
+  }
+
+  /* Contact Box */
+  .contact-box {
+    padding: 28px 20px;
+    gap: 36px;
+  }
+  .contact-info-title {
+    font-size: 1.8rem;
+  }
+  .channel-link {
+    padding: 14px 16px;
+  }
+  .channel-val {
+    font-size: 0.92rem;
+    word-break: break-all;
+  }
+
+  /* Modals */
   .modal-body {
     grid-template-columns: 1fr;
+    padding: 20px 18px;
+    gap: 20px;
   }
-  .stats-grid {
-    grid-template-columns: repeat(2, 1fr);
+  .modal-header {
+    padding: 16px 20px;
   }
-  .stat-item:nth-child(2)::after {
-    display: none;
+
+  /* Footer */
+  .footer-top {
+    grid-template-columns: 1fr;
+    gap: 32px;
   }
+  .footer-bottom {
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+  }
+  .site-footer {
+    padding: 50px 0 24px;
+  }
+
+  /* Floating Buttons */
   .whatsapp-text {
     display: none;
   }
   .whatsapp-float-btn {
+    bottom: 20px;
+    right: 20px;
     padding: 14px;
     border-radius: 50%;
+  }
+  .back-to-top-btn {
+    bottom: 20px;
+    left: 20px;
+    width: 42px;
+    height: 42px;
+  }
+}
+
+/* ==========================================================================
+   Mobile Optimization (Pixel 9 Pro ~412px, iPhone 14/15/16 ~393px, Galaxy)
+   ========================================================================== */
+@media (max-width: 600px) {
+  .container {
+    padding: 0 16px;
+  }
+
+  /* Hero Section */
+  .hero {
+    padding: 24px 0 45px;
+    min-height: auto;
+  }
+  .hero-hud-badge {
+    font-size: 0.7rem;
+    padding: 6px 12px;
+    white-space: normal;
+    text-align: center;
+    max-width: 100%;
+    line-height: 1.4;
+    margin-bottom: 14px;
+  }
+  .hero-title {
+    font-size: clamp(1.9rem, 8vw, 2.5rem);
+    line-height: 1.1;
+    margin-bottom: 14px;
+    word-break: break-word;
+  }
+  .hero-lead {
+    font-size: 0.94rem;
+    line-height: 1.55;
+    margin-bottom: 18px;
+  }
+
+  /* Meta Chips: Full Width HUD Data Tiles */
+  .hero-meta-chips {
+    flex-direction: column;
+    width: 100%;
+    gap: 8px;
+    margin-bottom: 20px;
+  }
+  .meta-chip {
+    width: 100%;
+    justify-content: flex-start;
+    padding: 9px 12px;
+    font-size: 0.82rem;
+  }
+
+  /* Action Buttons: Full Width Stack */
+  .hero-actions-row {
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+    margin-bottom: 22px;
+  }
+  .hero-actions-row .btn-cyber-primary,
+  .hero-actions-row .btn-cyber-outline,
+  .hero-actions-row .btn-sound-toggle {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    padding: 13px 18px;
+    font-size: 0.92rem;
+  }
+
+  /* Live Countdown Box: Responsive Flex Stack */
+  .countdown-box {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 100%;
+    padding: 12px 10px;
+    gap: 8px;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+  }
+  .countdown-label {
+    flex-direction: row;
+    gap: 6px;
+    font-size: 0.7rem;
+    justify-content: center;
+    text-align: center;
+  }
+  .countdown-digits {
+    display: flex;
+    gap: 6px;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+  }
+  .countdown-unit {
+    min-width: 36px;
+  }
+  .countdown-num {
+    font-size: 1.25rem;
+  }
+  .countdown-desc {
+    font-size: 0.6rem;
+  }
+  .countdown-divider {
+    font-size: 1.05rem;
+    margin-top: -3px;
+  }
+
+  /* 3D Holo Card */
+  .holo-head-card {
+    max-width: 100%;
+    padding: 14px;
+    margin-top: 10px;
+  }
+  .holo-head-img {
+    max-height: 200px;
+  }
+
+  /* Section Headers */
+  .section-tag {
+    font-size: 0.72rem;
+    padding: 5px 12px;
+  }
+  .section-title {
+    font-size: clamp(1.65rem, 6.5vw, 2.2rem);
+  }
+  .section-desc {
+    font-size: 0.92rem;
+    line-height: 1.55;
+  }
+  .section-center {
+    margin-bottom: 28px;
+  }
+
+  /* Pillars */
+  .pillar-card {
+    padding: 24px 16px;
+  }
+  .pillar-title {
+    font-size: 1.3rem;
+  }
+  .pillar-text {
+    font-size: 0.92rem;
+    line-height: 1.6;
+  }
+
+  /* About Narrative Box */
+  .about-narrative {
+    padding: 22px 14px;
+    gap: 22px;
+  }
+  .narrative-title {
+    font-size: 1.4rem;
+  }
+  .narrative-text p {
+    font-size: 0.94rem;
+    line-height: 1.65;
+  }
+  .narrative-quote {
+    padding: 14px 16px;
+    margin-top: 20px;
+  }
+  .narrative-quote p {
+    font-size: 0.92rem;
+  }
+  .narrative-badge {
+    padding: 12px;
+  }
+  .narrative-badge-title {
+    font-size: 0.86rem;
+  }
+  .narrative-badge-desc {
+    font-size: 0.76rem;
+  }
+
+  /* Agenda Acts Timeline: Clean Full-width Cards */
+  .agenda-tabs {
+    gap: 6px;
+    margin-bottom: 26px;
+  }
+  .agenda-tab-btn {
+    padding: 7px 12px;
+    font-size: 0.78rem;
+  }
+  .acts-timeline-wrapper {
+    padding-left: 0;
+  }
+  .acts-timeline-rail {
+    display: none;
+  }
+  .act-card::before {
+    display: none;
+  }
+  .act-card-header {
+    padding: 16px 14px;
+    gap: 10px;
+    align-items: flex-start;
+  }
+  .act-header-left {
+    width: 100%;
+    gap: 8px;
+  }
+  .act-title {
+    font-size: 1.05rem;
+    line-height: 1.35;
+  }
+  .act-tagline {
+    font-size: 0.82rem;
+  }
+  .act-badge {
+    padding: 4px 10px;
+    font-size: 0.72rem;
+  }
+  .act-time {
+    font-size: 0.82rem;
+  }
+  .act-card.expanded .act-body {
+    padding: 16px 14px;
+  }
+  .session-item {
+    padding: 12px 14px;
+    gap: 6px;
+  }
+  .session-speaker-name {
+    font-size: 0.98rem;
+  }
+  .session-topic {
+    font-size: 0.88rem;
+    line-height: 1.45;
+  }
+  .session-desc {
+    font-size: 0.82rem;
+    line-height: 1.55;
+  }
+
+  /* Speakers Grid */
+  .speakers-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+  .speaker-filters {
+    gap: 6px;
+    margin-bottom: 26px;
+  }
+  .filter-btn {
+    padding: 7px 12px;
+    font-size: 0.78rem;
+  }
+  .speaker-content {
+    padding: 18px 16px;
+  }
+  .speaker-name {
+    font-size: 1.2rem;
+  }
+  .speaker-role {
+    font-size: 0.82rem;
+    margin-bottom: 10px;
+  }
+  .speaker-topic-tag {
+    font-size: 0.78rem;
+    padding: 7px 10px;
+    margin-bottom: 12px;
+  }
+
+  /* Concert Spotlight Card */
+  .concert-card-featured {
+    padding: 22px 14px;
+    gap: 22px;
+  }
+  .concert-badge {
+    font-size: 0.72rem;
+    padding: 5px 12px;
+  }
+  .concert-title {
+    font-size: 1.7rem;
+    margin-bottom: 16px;
+  }
+  .concert-desc {
+    font-size: 0.92rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+  .concert-features-list {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    margin-bottom: 22px;
+  }
+  .concert-feature {
+    padding: 10px 12px;
+    font-size: 0.86rem;
+  }
+
+  /* Gallery Grid */
+  .gallery-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  /* Tickets */
+  .ticket-card {
+    padding: 26px 16px;
+  }
+  .ticket-type {
+    font-size: 1.25rem;
+  }
+  .ticket-desc {
+    font-size: 0.86rem;
+    min-height: auto;
+    margin-bottom: 20px;
+  }
+  .ticket-price-val {
+    font-size: 2.4rem;
+  }
+  .ticket-price-curr {
+    font-size: 0.95rem;
+  }
+  .ticket-feature-item {
+    font-size: 0.86rem;
+    gap: 10px;
+  }
+  .btn-buy-ticket {
+    padding: 12px 16px;
+    font-size: 0.88rem;
+  }
+
+  /* Venue Card */
+  .venue-card {
+    padding: 22px 14px;
+    gap: 22px;
+  }
+  .venue-name {
+    font-size: 1.55rem;
+  }
+  .venue-address {
+    font-size: 0.92rem;
+    margin-bottom: 20px;
+  }
+  .venue-details-grid {
+    gap: 16px;
+    margin-bottom: 24px;
+  }
+  .venue-detail-item {
+    gap: 12px;
+  }
+  .venue-detail-text h4 {
+    font-size: 0.92rem;
+  }
+  .venue-detail-text p {
+    font-size: 0.84rem;
+  }
+  .venue-map-wrapper {
+    min-height: 220px;
+  }
+
+  /* FAQ */
+  .faq-question {
+    padding: 16px 14px;
+    font-size: 0.98rem;
+    gap: 10px;
+  }
+  .faq-answer {
+    padding: 0 14px;
+  }
+  .faq-item.active .faq-answer {
+    padding-bottom: 16px;
+  }
+  .faq-answer p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+
+  /* Contact Box & Form */
+  .contact-box {
+    padding: 22px 14px;
+    gap: 26px;
+  }
+  .contact-info-title {
+    font-size: 1.55rem;
+  }
+  .contact-info-desc {
+    font-size: 0.94rem;
+    line-height: 1.6;
+    margin-bottom: 24px;
+  }
+  .channel-link {
+    padding: 12px 14px;
+    gap: 12px;
+  }
+  .channel-val {
+    font-size: 0.88rem;
+    word-break: break-all;
+  }
+  .form-input,
+  .form-textarea {
+    padding: 12px 14px;
+    font-size: 0.92rem;
+  }
+  .btn-submit {
+    width: 100%;
+    padding: 14px 20px;
+    font-size: 0.9rem;
+  }
+
+  /* Modals */
+  dialog.speaker-modal {
+    width: 95vw;
+    max-width: 95vw;
+    margin: 10px auto;
+  }
+  .modal-header {
+    padding: 14px 16px;
+  }
+  .modal-body {
+    padding: 16px 14px;
+    gap: 16px;
+  }
+  .modal-speaker-name {
+    font-size: 1.3rem;
+  }
+  .modal-topic-text {
+    font-size: 0.88rem;
+  }
+  .modal-speaker-bio {
+    font-size: 0.88rem;
+    line-height: 1.6;
+  }
+}
+
+/* ==========================================================================
+   Narrow Mobile Screens (< 400px, e.g. 360px Android devices)
+   ========================================================================== */
+@media (max-width: 400px) {
+  .nav-brand-wordmark {
+    height: 17px;
+    max-width: 145px;
+  }
+  .hero-title {
+    font-size: 1.85rem;
+  }
+  .stat-number {
+    font-size: 1.8rem;
+  }
+  .stat-label {
+    font-size: 0.74rem;
+  }
+  .countdown-unit {
+    min-width: 32px;
+  }
+  .countdown-num {
+    font-size: 1.15rem;
+  }
+  .countdown-desc {
+    font-size: 0.55rem;
   }
 }
