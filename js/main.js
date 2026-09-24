@@ -4,6 +4,7 @@
  */
 
 document.addEventListener('DOMContentLoaded', () => {
+  initThemeToggle();
   initTelemetryHUD();
   initCyberShader();
   initHoloCard3D();
@@ -656,6 +657,10 @@ function initCyberShader() {
   });
   resize();
 
+  function isLight() {
+    return document.documentElement.getAttribute('data-theme') === 'light';
+  }
+
   // Create nodes
   for (let i = 0; i < particleCount; i++) {
     particles.push({
@@ -664,7 +669,7 @@ function initCyberShader() {
       vx: (Math.random() - 0.5) * 0.45,
       vy: (Math.random() - 0.5) * 0.45,
       radius: Math.random() * 1.8 + 1,
-      color: Math.random() > 0.6 ? 'rgba(0, 240, 255, ' : 'rgba(168, 85, 247, '
+      isAlt: Math.random() > 0.6
     });
   }
 
@@ -680,6 +685,11 @@ function initCyberShader() {
   function render() {
     ctx.clearRect(0, 0, width, height);
 
+    const light = isLight();
+    const primaryRGB = light ? '2, 132, 199' : '0, 240, 255';
+    const secondaryRGB = light ? '124, 58, 237' : '168, 85, 247';
+    const linkAlphaMult = light ? 1.6 : 1.0;
+
     // Update & draw particles
     for (let i = 0; i < particles.length; i++) {
       const p = particles[i];
@@ -690,10 +700,12 @@ function initCyberShader() {
       if (p.x < 0 || p.x > width) p.vx *= -1;
       if (p.y < 0 || p.y > height) p.vy *= -1;
 
+      const pRGB = p.isAlt ? secondaryRGB : primaryRGB;
+
       // Draw particle
       ctx.beginPath();
       ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
-      ctx.fillStyle = `${p.color}0.7)`;
+      ctx.fillStyle = `rgba(${pRGB}, 0.75)`;
       ctx.fill();
 
       // Connect to neighbors
@@ -704,9 +716,9 @@ function initCyberShader() {
         const dist = Math.sqrt(dx * dx + dy * dy);
 
         if (dist < 130) {
-          const alpha = (1 - dist / 130) * 0.22;
+          const alpha = (1 - dist / 130) * 0.22 * linkAlphaMult;
           ctx.beginPath();
-          ctx.strokeStyle = `rgba(0, 240, 255, ${alpha})`;
+          ctx.strokeStyle = `rgba(${primaryRGB}, ${alpha})`;
           ctx.lineWidth = 0.8;
           ctx.moveTo(p.x, p.y);
           ctx.lineTo(p2.x, p2.y);
@@ -719,9 +731,9 @@ function initCyberShader() {
       const mdy = p.y - mouseY;
       const mDist = Math.sqrt(mdx * mdx + mdy * mdy);
       if (mDist < 160) {
-        const mAlpha = (1 - mDist / 160) * 0.45;
+        const mAlpha = (1 - mDist / 160) * 0.45 * linkAlphaMult;
         ctx.beginPath();
-        ctx.strokeStyle = `rgba(0, 240, 255, ${mAlpha})`;
+        ctx.strokeStyle = `rgba(${primaryRGB}, ${mAlpha})`;
         ctx.lineWidth = 1;
         ctx.moveTo(p.x, p.y);
         ctx.lineTo(mouseX, mouseY);
@@ -813,3 +825,65 @@ function initTimelineLaserRail() {
   window.addEventListener('resize', updateRail, { passive: true });
   updateRail();
 }
+
+/* ==========================================================================
+   16. Theme Toggle System (Cyber-Dark / Cleanroom-Light)
+   ========================================================================== */
+function initThemeToggle() {
+  const telemetryBtn = document.getElementById('theme-toggle-telemetry');
+  const navBtn = document.getElementById('nav-theme-toggle');
+
+  function getActiveTheme() {
+    return document.documentElement.getAttribute('data-theme') === 'light' ? 'light' : 'dark';
+  }
+
+  function applyTheme(theme, save = true) {
+    if (theme === 'light') {
+      document.documentElement.setAttribute('data-theme', 'light');
+    } else {
+      document.documentElement.removeAttribute('data-theme');
+    }
+
+    if (save) {
+      try {
+        localStorage.setItem('futuropolis-theme', theme);
+      } catch {
+        // localStorage not available
+      }
+    }
+
+    updateUI(theme);
+    window.dispatchEvent(new CustomEvent('themechange', { detail: { theme } }));
+  }
+
+  function updateUI(theme) {
+    const isLight = theme === 'light';
+
+    if (telemetryBtn) {
+      const icon = telemetryBtn.querySelector('.theme-icon');
+      const label = telemetryBtn.querySelector('.theme-label');
+      if (icon) icon.textContent = isLight ? '🌙' : '☀️';
+      if (label) label.textContent = isLight ? 'DARK' : 'LIGHT';
+      telemetryBtn.setAttribute('title', isLight ? 'Przełącz na tryb ciemny' : 'Przełącz na tryb jasny');
+    }
+
+    if (navBtn) {
+      const icon = navBtn.querySelector('.theme-icon');
+      if (icon) icon.textContent = isLight ? '🌙' : '☀️';
+      navBtn.setAttribute('title', isLight ? 'Przełącz na tryb ciemny' : 'Przełącz na tryb jasny');
+    }
+  }
+
+  function toggle() {
+    const current = getActiveTheme();
+    const next = current === 'light' ? 'dark' : 'light';
+    applyTheme(next);
+  }
+
+  if (telemetryBtn) telemetryBtn.addEventListener('click', toggle);
+  if (navBtn) navBtn.addEventListener('click', toggle);
+
+  // Initialize UI state
+  updateUI(getActiveTheme());
+}
+
