@@ -241,14 +241,162 @@
   border-color: var(--border-glass);
 }
 
+[data-theme="light"] .section-concert-spotlight {
+  background: linear-gradient(180deg, #f8fafc 0%, #edf2f7 50%, #f8fafc 100%);
+}
+
+[data-theme="light"] .concert-feature {
+  background: rgba(15, 23, 42, 0.03);
+  border-color: rgba(15, 23, 42, 0.08);
+  color: var(--text-main);
+}
+
+/* Stats Banner in Light Theme */
+[data-theme="light"] .stats-banner {
+  background: rgba(241, 245, 249, 0.95);
+  border-top-color: var(--border-glass);
+  border-bottom-color: var(--border-glass);
+  box-shadow: 0 4px 20px rgba(15, 23, 42, 0.03);
+}
+
+[data-theme="light"] .stat-item {
+  background: rgba(255, 255, 255, 0.7);
+  border-color: var(--border-glass);
+}
+
+[data-theme="light"] .stat-number {
+  background: var(--grad-cyan-violet);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 900;
+}
+
+[data-theme="light"] .stat-label {
+  color: #1e293b;
+  font-weight: 600;
+}
+
+/* Tickets in Light Theme */
 [data-theme="light"] .ticket-card {
   background: rgba(255, 255, 255, 0.94);
   border-color: var(--border-glass);
 }
 
+/* Bilet Standard Featured Card in Light Theme */
+[data-theme="light"] .ticket-card.featured {
+  background: linear-gradient(180deg, #ffffff 0%, rgba(240, 249, 255, 0.98) 100%);
+  border: 2px solid var(--neon-cyan);
+  box-shadow: 0 15px 40px -10px rgba(2, 132, 199, 0.25), 0 0 30px rgba(2, 132, 199, 0.15);
+}
+
+[data-theme="light"] .ticket-card.featured .ticket-type,
+[data-theme="light"] .ticket-card.featured .ticket-price-val {
+  color: var(--text-bright);
+}
+
+[data-theme="light"] .ticket-card.featured .ticket-desc,
+[data-theme="light"] .ticket-card.featured .ticket-price-curr {
+  color: var(--text-muted);
+}
+
+[data-theme="light"] .ticket-card.featured .ticket-feature-item {
+  color: var(--text-main);
+}
+
+[data-theme="light"] .ticket-card.featured .ticket-ribbon {
+  background: var(--grad-cyan-violet);
+  color: #ffffff;
+  box-shadow: 0 4px 15px rgba(2, 132, 199, 0.35);
+}
+
+[data-theme="light"] .ticket-card.featured .btn-buy-ticket {
+  background: var(--grad-cyan-violet);
+  color: #ffffff;
+  box-shadow: 0 6px 20px rgba(2, 132, 199, 0.35);
+}
+
+[data-theme="light"] .ticket-card.featured .btn-buy-ticket:hover {
+  box-shadow: 0 8px 30px rgba(2, 132, 199, 0.55);
+  color: #ffffff;
+}
+
+/* Agenda Acts & Sessions in Light Theme */
+[data-theme="light"] .act-card.break-card {
+  background: rgba(241, 245, 249, 0.75);
+  border: 1px dashed rgba(15, 23, 42, 0.18);
+}
+
+[data-theme="light"] .session-item {
+  background: rgba(248, 250, 252, 0.9);
+  border-color: rgba(15, 23, 42, 0.08);
+}
+
+[data-theme="light"] .agenda-tab-btn {
+  background: rgba(15, 23, 42, 0.04);
+  border-color: rgba(15, 23, 42, 0.1);
+  color: var(--text-muted);
+}
+
+[data-theme="light"] .agenda-tab-btn.active {
+  background: var(--neon-cyan);
+  border-color: var(--neon-cyan);
+  color: #ffffff;
+  box-shadow: 0 0 20px rgba(2, 132, 199, 0.35);
+}
+
+[data-theme="light"] .filter-btn {
+  background: rgba(15, 23, 42, 0.04);
+  border-color: rgba(15, 23, 42, 0.1);
+  color: var(--text-muted);
+}
+
+[data-theme="light"] .filter-btn.active {
+  background: var(--neon-violet);
+  border-color: var(--neon-violet);
+  color: #ffffff;
+  box-shadow: 0 0 20px rgba(124, 58, 237, 0.35);
+}
+
+[data-theme="light"] .act-toggle-btn {
+  background: rgba(15, 23, 42, 0.05);
+  border-color: rgba(15, 23, 42, 0.1);
+  color: var(--text-main);
+}
+
+[data-theme="light"] .act-card.expanded .act-toggle-btn {
+  background: var(--neon-cyan);
+  color: #ffffff;
+}
+
+/* FAQ in Light Theme */
 [data-theme="light"] .faq-item {
   background: rgba(255, 255, 255, 0.92);
   border-color: var(--border-glass);
+}
+
+[data-theme="light"] .faq-icon {
+  background: rgba(15, 23, 42, 0.05);
+  color: var(--text-muted);
+}
+
+[data-theme="light"] .faq-item.active .faq-icon {
+  background: var(--neon-cyan);
+  color: #ffffff;
+}
+
+[data-theme="light"] .contact-box {
+  background: rgba(255, 255, 255, 0.95);
+  border-color: var(--border-glass);
+}
+
+[data-theme="light"] .channel-link {
+  background: rgba(15, 23, 42, 0.03);
+  border-color: rgba(15, 23, 42, 0.08);
+}
+
+[data-theme="light"] .channel-link:hover {
+  background: rgba(2, 132, 199, 0.06);
+  border-color: var(--neon-cyan);
 }
 
 [data-theme="light"] .contact-input,
@@ -256,6 +404,11 @@
   background: rgba(255, 255, 255, 0.95);
   border-color: var(--border-glass);
   color: var(--text-bright);
+}
+
+[data-theme="light"] .venue-card {
+  background: rgba(255, 255, 255, 0.95);
+  border-color: var(--border-glass);
 }
 
 [data-theme="light"] .site-footer {
