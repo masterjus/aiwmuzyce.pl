@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html lang="pl">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>FUTUROPOLIS 2026 | AI w Muzyce: Sztuka, Człowiek i Technologia</title>
-  
+
   <!-- SEO Meta Tags -->
-  <meta name="description" content="IV edycja ogólnopolskiej konferencji AI w Muzyce — FUTUROPOLIS. 28 listopada 2026, Dom Kultury KADR w Warszawie. 7 Aktów, wykłady, pokazy technologiczne live, debata i koncert multimedialny LIRAEL-9.">
-  <meta name="keywords" content="AI w muzyce, Futuropolis, sztuczna inteligencja muzyka, Gniewomir Tomczyk, Dom Kultury KADR, Neutone, synteza dźwięku AI, prawo autorskie AI, koncert Lirael-9, konferencja technologiczna Warszawa">
+  <meta name="description"
+    content="IV edycja ogólnopolskiej konferencji AI w Muzyce — FUTUROPOLIS. 28 listopada 2026, Dom Kultury KADR w Warszawie. 7 Aktów, wykłady, pokazy technologiczne live, debata i koncert multimedialny LIRAEL-9.">
+  <meta name="keywords"
+    content="AI w muzyce, Futuropolis, sztuczna inteligencja muzyka, Gniewomir Tomczyk, Dom Kultury KADR, Neutone, synteza dźwięku AI, prawo autorskie AI, koncert Lirael-9, konferencja technologiczna Warszawa">
   <meta name="author" content="Futuropolis / Gniewomir Tomczyk">
   <link rel="canonical" href="https://aiwmuzyce.pl/">
 
@@ -15,14 +18,16 @@
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://aiwmuzyce.pl/">
   <meta property="og:title" content="FUTUROPOLIS 2026 | AI w Muzyce: Sztuka, Człowiek i Technologia">
-  <meta property="og:description" content="28 listopada 2026 w Warszawie. Najważniejsze interdyscyplinarne spotkanie sztuki, technologii i sztucznej inteligencji. Wykłady, pokazy na żywo, wielka debata i koncert LIRAEL-9.">
+  <meta property="og:description"
+    content="28 listopada 2026 w Warszawie. Najważniejsze interdyscyplinarne spotkanie sztuki, technologii i sztucznej inteligencji. Wykłady, pokazy na żywo, wielka debata i koncert LIRAEL-9.">
   <meta property="og:image" content="assets/branding/futuropolis-logo.png">
 
   <!-- Twitter -->
   <meta property="twitter:card" content="summary_large_image">
   <meta property="twitter:url" content="https://aiwmuzyce.pl/">
   <meta property="twitter:title" content="FUTUROPOLIS 2026 | AI w Muzyce">
-  <meta property="twitter:description" content="Człowiek – Technologia – Algorytm. Całodniowa konferencja i koncert multimedialny w Domu Kultury KADR w Warszawie.">
+  <meta property="twitter:description"
+    content="Człowiek – Technologia – Algorytm. Całodniowa konferencja i koncert multimedialny w Domu Kultury KADR w Warszawie.">
   <meta property="twitter:image" content="assets/branding/futuropolis-logo.png">
 
   <!-- Favicon: Cybernetic Futuropolis Head Logo -->
@@ -33,14 +38,16 @@
   <!-- Google Fonts: Outfit & Inter -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;600&family=Outfit:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;600&family=Outfit:wght@400;600;700;800;900&display=swap"
+    rel="stylesheet">
 
   <!-- Stylesheet -->
   <link rel="stylesheet" href="css/style.css">
 
   <!-- Early Theme Detection (Dark is default) -->
   <script>
-    (function() {
+    (function () {
       try {
         var savedTheme = localStorage.getItem('futuropolis-theme');
         if (savedTheme === 'light') {
@@ -48,7 +55,7 @@
         } else {
           document.documentElement.removeAttribute('data-theme');
         }
-      } catch (e) {}
+      } catch (e) { }
     })();
   </script>
 
@@ -91,6 +98,7 @@
   }
   </script>
 </head>
+
 <body>
 
   <!-- Futuristic Cyber Grid Overlay -->
@@ -110,11 +118,13 @@
       <div class="telemetry-item">
         <span>CLOCK: <span class="telemetry-code" id="telemetry-clock">--:--:-- CET</span></span>
         <span style="opacity:0.35;">|</span>
-        <button type="button" class="btn-sound-toggle" id="telemetry-audio-toggle" aria-label="Przełącz efekty dźwiękowe">
+        <button type="button" class="btn-sound-toggle" id="telemetry-audio-toggle"
+          aria-label="Przełącz efekty dźwiękowe">
           <span>🔊 FX:</span> <span id="fx-status-text">OFF</span>
         </button>
         <span style="opacity:0.35;">|</span>
-        <button type="button" class="btn-theme-toggle" id="theme-toggle-telemetry" aria-label="Przełącz motyw (Jasny / Ciemny)">
+        <button type="button" class="btn-theme-toggle" id="theme-toggle-telemetry"
+          aria-label="Przełącz motyw (Jasny / Ciemny)">
           <span class="theme-icon">☀️</span> <span class="theme-label">LIGHT</span>
         </button>
       </div>
@@ -145,14 +155,17 @@
       </nav>
 
       <div class="nav-actions">
-        <button type="button" class="btn-theme-nav" id="nav-theme-toggle" aria-label="Przełącz motyw (Jasny / Ciemny)" title="Przełącz motyw">
+        <button type="button" class="btn-theme-nav" id="nav-theme-toggle" aria-label="Przełącz motyw (Jasny / Ciemny)"
+          title="Przełącz motyw">
           <span class="theme-icon">☀️</span>
         </button>
-        <a href="https://goingapp.pl/wydarzenie/iv-konferencja-ai-w-muzyce-futuropolis-28-11/warszawa-listopad-2026" target="_blank" rel="noopener noreferrer" class="btn-ticket-hud" id="nav-btn-tickets">
+        <a href="https://goingapp.pl/wydarzenie/iv-konferencja-ai-w-muzyce-futuropolis-28-11/warszawa-listopad-2026"
+          target="_blank" rel="noopener noreferrer" class="btn-ticket-hud" id="nav-btn-tickets">
           <span>Kup Bilet</span>
           <span aria-hidden="true">→</span>
         </a>
-        <button type="button" class="mobile-menu-btn" id="mobile-menu-toggle" aria-label="Otwórz menu mobilne" aria-expanded="false">
+        <button type="button" class="mobile-menu-btn" id="mobile-menu-toggle" aria-label="Otwórz menu mobilne"
+          aria-expanded="false">
           ☰
         </button>
       </div>
@@ -192,7 +205,9 @@
           </h1>
 
           <p class="hero-lead">
-            <strong>Sztuka, Człowiek i Technologia.</strong> Przełamujemy granice między sceną a kodem. Całodniowa interdyscyplinarna konferencja, debaty z liderami mediów i kultury, pokazy technologiczne live oraz multimedialny koncert finałowy <strong>LIRAEL-9</strong>.
+            <strong>Sztuka, Człowiek i Technologia.</strong> Przełamujemy granice między sceną a kodem. Całodniowa
+            interdyscyplinarna konferencja, debaty z liderami mediów i kultury, pokazy technologiczne live oraz
+            multimedialny koncert finałowy <strong>LIRAEL-9</strong>.
           </p>
 
           <div class="hero-meta-chips">
@@ -211,7 +226,8 @@
           </div>
 
           <div class="hero-actions-row">
-            <a href="https://goingapp.pl/wydarzenie/iv-konferencja-ai-w-muzyce-futuropolis-28-11/warszawa-listopad-2026" target="_blank" rel="noopener noreferrer" class="btn-cyber-primary" id="hero-cta-ticket">
+            <a href="https://goingapp.pl/wydarzenie/iv-konferencja-ai-w-muzyce-futuropolis-28-11/warszawa-listopad-2026"
+              target="_blank" rel="noopener noreferrer" class="btn-cyber-primary" id="hero-cta-ticket">
               <span>Kup Bilet na Going</span>
               <span aria-hidden="true">↗</span>
             </a>
@@ -263,7 +279,8 @@
             </div>
             <div class="holo-head-img-box">
               <div class="holo-scanline"></div>
-              <img src="assets/branding/futuropolis-head.png" alt="Futuropolis Cybernetic Head - Logo Konferencji" class="holo-head-img" id="holo-head-img">
+              <img src="assets/branding/futuropolis-head.png" alt="Futuropolis Cybernetic Head - Logo Konferencji"
+                class="holo-head-img" id="holo-head-img">
             </div>
             <div class="holo-head-footer">
               <div class="holo-live-tag">7 TEMATYCZNYCH AKTÓW</div>
@@ -307,7 +324,9 @@
           <span class="section-tag">Idea & Manifest</span>
           <h2 class="section-title">Człowiek • Technologia • Algorytm</h2>
           <p class="section-desc">
-            Odczarowujemy temat sztucznej inteligencji w muzyce. Odcinamy się od medialnych sensacji i powierzchownego generowania gotowych plików. Skupiamy się na realnych, artystycznych możliwościach i synergii człowieka z maszyną.
+            Odczarowujemy temat sztucznej inteligencji w muzyce. Odcinamy się od medialnych sensacji i powierzchownego
+            generowania gotowych plików. Skupiamy się na realnych, artystycznych możliwościach i synergii człowieka z
+            maszyną.
           </p>
         </div>
 
@@ -317,7 +336,9 @@
             <div class="pillar-icon-box">🧠</div>
             <h3 class="pillar-title">1. CZŁOWIEK</h3>
             <p class="pillar-text">
-              Punktem wyjścia zawsze pozostaje ludzka wrażliwość, intuicja i świadoma decyzja artystyczna. AI nie zastępuje twórcy — rzuca wyzwanie jego autentyczności i redefiniuje pojęcie błędu oraz spontanicznej improwizacji.
+              Punktem wyjścia zawsze pozostaje ludzka wrażliwość, intuicja i świadoma decyzja artystyczna. AI nie
+              zastępuje twórcy — rzuca wyzwanie jego autentyczności i redefiniuje pojęcie błędu oraz spontanicznej
+              improwizacji.
             </p>
           </article>
 
@@ -325,7 +346,9 @@
             <div class="pillar-icon-box">⚙️</div>
             <h3 class="pillar-title">2. TECHNOLOGIA</h3>
             <p class="pillar-text">
-              Systemy syntezy hybrydowej, sensory perkusyjne, przetwarzanie sygnału audio w czasie rzeczywistym i interakcja na scenie. Badamy inżynierię dźwięku z perspektywy praktyków z wieloletnim dorobkiem scenicznym i studyjnym.
+              Systemy syntezy hybrydowej, sensory perkusyjne, przetwarzanie sygnału audio w czasie rzeczywistym i
+              interakcja na scenie. Badamy inżynierię dźwięku z perspektywy praktyków z wieloletnim dorobkiem scenicznym
+              i studyjnym.
             </p>
           </article>
 
@@ -333,7 +356,8 @@
             <div class="pillar-icon-box">⚡</div>
             <h3 class="pillar-title">3. ALGORYTM</h3>
             <p class="pillar-text">
-              Sztuczna inteligencja jako instrument i partner dialogu, a nie czarna skrzynka. Przyglądamy się modelom generatywnym Neutone, Suno, deep learningowi oraz prawnym realiom praw autorskich i tantiem w Europie.
+              Sztuczna inteligencja jako instrument i partner dialogu, a nie czarna skrzynka. Przyglądamy się modelom
+              generatywnym Neutone, Suno, deep learningowi oraz prawnym realiom praw autorskich i tantiem w Europie.
             </p>
           </article>
         </div>
@@ -343,27 +367,35 @@
           <div class="narrative-text">
             <h3 class="narrative-title">Od eksperymentu perkusyjnego do ogólnopolskiej platformy</h3>
             <p>
-              Projekt <strong>FUTUROPOLIS</strong> powstał w 2023 roku z inicjatywy perkusisty, kompozytora i producenta <strong>Gniewomira Tomczyka</strong>. Początkowo był to eksperymentalny format łączący perkusję na żywo z elektroniką i algorytmami AI (m.in. w warszawskim klubie MOXO).
+              Projekt <strong>FUTUROPOLIS</strong> powstał w 2023 roku z inicjatywy perkusisty, kompozytora i producenta
+              <strong>Gniewomira Tomczyka</strong>. Początkowo był to eksperymentalny format łączący perkusję na żywo z
+              elektroniką i algorytmami AI (m.in. w warszawskim klubie MOXO).
             </p>
             <p>
-              Z czasem idea przerodziła się w interdyscyplinarną platformę wymiany wiedzy goszczącą na <strong>Uniwersytecie Muzycznym Fryderyka Chopina (UMFC)</strong>, w Akademiach Muzycznych w Poznaniu i Krakowie, Szkole Głównej Handlowej, Google Campus czy podczas HumanTech Summit.
+              Z czasem idea przerodziła się w interdyscyplinarną platformę wymiany wiedzy goszczącą na
+              <strong>Uniwersytecie Muzycznym Fryderyka Chopina (UMFC)</strong>, w Akademiach Muzycznych w Poznaniu i
+              Krakowie, Szkole Głównej Handlowej, Google Campus czy podczas HumanTech Summit.
             </p>
             <p>
-              Ważną osią artystyczną projektu pozostaje filozoficzna literatura <strong>Stanisława Lema</strong> — rozważania nad granicą świadomości, człowieczeństwa i technologii.
+              Ważną osią artystyczną projektu pozostaje filozoficzna literatura <strong>Stanisława Lema</strong> —
+              rozważania nad granicą świadomości, człowieczeństwa i technologii.
             </p>
 
             <div class="narrative-quote">
-              <p>„Nie szukamy prostej odpowiedzi, czy AI to szansa czy zagrożenie. Tworzymy przestrzeń eksperymentu, w której przyszłość muzyki nie jest tylko przedmiotem teorii, lecz doświadczeniem na żywo.”</p>
+              <p>„Nie szukamy prostej odpowiedzi, czy AI to szansa czy zagrożenie. Tworzymy przestrzeń eksperymentu, w
+                której przyszłość muzyki nie jest tylko przedmiotem teorii, lecz doświadczeniem na żywo.”</p>
               <cite>— Gniewomir Tomczyk, dyrektor artystyczny Futuropolis</cite>
             </div>
           </div>
 
           <div class="narrative-visual">
             <div class="narrative-img-box">
-              <img src="assets/gallery/DSC_5333.jpg" alt="Gniewomir Tomczyk podczas występu z perkusją hybrydową i elektroniką" loading="lazy">
+              <img src="assets/gallery/DSC_5333.jpg"
+                alt="Gniewomir Tomczyk podczas występu z perkusją hybrydową i elektroniką" loading="lazy">
               <div class="narrative-badge">
                 <div class="narrative-badge-title">Perkusja na żywo + DSP w czasie rzeczywistym</div>
-                <div class="narrative-badge-desc">Zaawansowana integracja dźwięku pod kierownictwem Grzegorza Steca</div>
+                <div class="narrative-badge-desc">Zaawansowana integracja dźwięku pod kierownictwem Grzegorza Steca
+                </div>
               </div>
             </div>
           </div>
@@ -380,17 +412,22 @@
           <span class="section-tag">Harmonogram Konferencji</span>
           <h2 class="section-title">Program Wydarzenia: 7 Aktów</h2>
           <p class="section-desc">
-            10:00 – 21:00 • Przejdź drogę od ludzkiej tożsamości, przez technologię i narzędzia, po pokazy na żywo, wielką debatę i koncert LIRAEL-9.
+            10:00 – 21:00 • Przejdź drogę od ludzkiej tożsamości, przez technologię i narzędzia, po pokazy na żywo,
+            wielką debatę i koncert LIRAEL-9.
           </p>
         </div>
 
         <!-- Filter Tabs -->
         <div class="agenda-tabs" role="tablist">
-          <button type="button" class="agenda-tab-btn active" data-filter="all" id="tab-agenda-all">Wszystkie Akty</button>
-          <button type="button" class="agenda-tab-btn" data-filter="lectures" id="tab-agenda-lectures">Wykłady & Panele</button>
+          <button type="button" class="agenda-tab-btn active" data-filter="all" id="tab-agenda-all">Wszystkie
+            Akty</button>
+          <button type="button" class="agenda-tab-btn" data-filter="lectures" id="tab-agenda-lectures">Wykłady &
+            Panele</button>
           <button type="button" class="agenda-tab-btn" data-filter="demos" id="tab-agenda-demos">Pokazy na Żywo</button>
-          <button type="button" class="agenda-tab-btn" data-filter="debate" id="tab-agenda-debate">Wielka Debata</button>
-          <button type="button" class="agenda-tab-btn" data-filter="concert" id="tab-agenda-concert">Koncert LIRAEL-9</button>
+          <button type="button" class="agenda-tab-btn" data-filter="debate" id="tab-agenda-debate">Wielka
+            Debata</button>
+          <button type="button" class="agenda-tab-btn" data-filter="concert" id="tab-agenda-concert">Koncert
+            LIRAEL-9</button>
         </div>
 
         <!-- Acts Container with Cyber Timeline Rail (Inspired by eugene.kirdzei.me) -->
@@ -401,394 +438,447 @@
 
           <div class="acts-timeline">
 
-          <!-- Opening -->
-          <div class="act-card expanded" data-category="lectures">
-            <div class="act-card-header">
-              <div class="act-header-left">
-                <span class="act-badge">Otwarcie</span>
-                <span class="act-time">10:00 – 10:15</span>
-                <div class="act-info">
-                  <h3 class="act-title">Oficjalne Otwarcie IV Edycji Konferencji FUTUROPOLIS</h3>
-                  <div class="act-tagline">Powitanie gości i wprowadzenie do idei Człowiek – Technologia – Algorytm</div>
-                </div>
-              </div>
-              <div class="act-toggle-btn" aria-hidden="true">▼</div>
-            </div>
-            <div class="act-body">
-              <div class="act-sessions-list">
-                <div class="session-item">
-                  <div class="session-time">10:00</div>
-                  <div class="session-details">
-                    <div class="session-speaker-name">Gniewomir Tomczyk</div>
-                    <div class="session-topic">Wprowadzenie w założenia programowe IV edycji Futuropolis</div>
-                    <div class="session-desc">Dlaczego tegoroczna odsłona odbywa się pod hasłem Sztuka, Człowiek i Technologia? Przedstawienie prelegentów, partnerów oraz struktury 7 Aktów wydarzenia.</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- ACT I -->
-          <div class="act-card expanded" data-category="lectures">
-            <div class="act-card-header">
-              <div class="act-header-left">
-                <span class="act-badge">Akt I</span>
-                <span class="act-time">10:15 – 11:45</span>
-                <div class="act-info">
-                  <h3 class="act-title">AKT I — CZŁOWIEK / TWÓRCA / AUTENTYCZNOŚĆ</h3>
-                  <div class="act-tagline">Ludzka perspektywa, improwizacja, unikalny język artystyczny w dobie syntetycznej doskonałości</div>
-                </div>
-              </div>
-              <div class="act-toggle-btn" aria-hidden="true">▼</div>
-            </div>
-            <div class="act-body">
-              <div class="act-sessions-list">
-                <div class="session-item">
-                  <div class="session-time">10:15</div>
-                  <div class="session-details">
-                    <div class="session-speaker-name">Janusz Stokłosa</div>
-                    <div class="session-topic">Perspektywa kompozytora, doświadczenie twórcze, zmiany technologiczne w muzyce</div>
-                    <div class="session-desc">Twórca muzyki do musicalu „Metro” (nominowanego do nagrody Tony na Broadwayu) o rewolucjach technologicznych, których był świadkiem, oraz o tym, co decyduje o sile melodii i emocji w kompozycji.</div>
-                  </div>
-                </div>
-                <div class="session-item">
-                  <div class="session-time">10:45</div>
-                  <div class="session-details">
-                    <div class="session-speaker-name">Natalia Kordiak</div>
-                    <div class="session-topic">Twórca, improwizacja, własny język, indywidualność i autentyczność wobec AI</div>
-                    <div class="session-desc">Sztuka błędu: swobodna improwizacja ludzkiego głosu wobec imitacji spontaniczności i przewidywalnej perfekcji algorytmów. Jak zachować tożsamość wokalną?</div>
-                  </div>
-                </div>
-                <div class="session-item">
-                  <div class="session-time">11:15</div>
-                  <div class="session-details">
-                    <div class="session-speaker-name">Bartozzi Wojciechowski</div>
-                    <div class="session-topic">Twórczość współczesna / technologia / nowe sposoby pracy artysty</div>
-                    <div class="session-desc">Ceniony basista i pedagog o rewolucji cyfryzacji rynku muzycznego, rysie historycznym oraz nowym warsztacie muzyka estradowego współpracującego z technologią hybrydową.</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Break -->
-          <div class="act-card break-card">
-            <div class="act-card-header">
-              <div class="act-header-left">
-                <span class="act-badge break">Przerwa</span>
-                <span class="act-time">11:45 – 11:55</span>
-                <div class="act-info">
-                  <h3 class="act-title">Przerwa networkingowa (10 min)</h3>
-                  <div class="act-tagline">Kawa, kuluarowe dyskusje i zapoznanie się ze strefą partnerów</div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- ACT II -->
-          <div class="act-card" data-category="lectures">
-            <div class="act-card-header">
-              <div class="act-header-left">
-                <span class="act-badge">Akt II</span>
-                <span class="act-time">11:55 – 13:40</span>
-                <div class="act-info">
-                  <h3 class="act-title">AKT II — MASZYNA / TECHNOLOGIA / NOWE NARZĘDZIA</h3>
-                  <div class="act-tagline">Architektura uczenia maszynowego, sieci neuronowe, eksperymenty cyfrowe i robotyka sceniczna</div>
-                </div>
-              </div>
-              <div class="act-toggle-btn" aria-hidden="true">▼</div>
-            </div>
-            <div class="act-body">
-              <div class="act-sessions-list">
-                <div class="session-item">
-                  <div class="session-time">11:55</div>
-                  <div class="session-details">
-                    <div class="session-speaker-name">Borys Stokalski</div>
-                    <div class="session-topic">Szersza perspektywa AI: dokąd zmierza technologia i jak zmienia kulturę?</div>
-                    <div class="session-desc">Współzałożyciel Infovide-Matrix i inwestor deeptech o trendach w modelach multimodalnych, agentach autonomicznych i redefinicji kapitału kreatywnego.</div>
-                  </div>
-                </div>
-                <div class="session-item">
-                  <div class="session-time">12:20</div>
-                  <div class="session-details">
-                    <div class="session-speaker-name">dr inż. Mateusz Modrzejewski</div>
-                    <div class="session-topic">AI i uczenie maszynowe w muzyce: od kodu do performansu</div>
-                    <div class="session-desc">Naukowiec Politechniki Warszawskiej i b. inżynier Apple Music ML prezentuje techniczne kulisy działania sieci generujących audio oraz możliwości analizy rytmu na żywo.</div>
-                  </div>
-                </div>
-                <div class="session-item">
-                  <div class="session-time">12:45</div>
-                  <div class="session-details">
-                    <div class="session-speaker-name">Dariusz Makaruk</div>
-                    <div class="session-topic">AI, eksperyment, sztuka cyfrowa i nowe sposoby tworzenia</div>
-                    <div class="session-desc">Artysta multimedialny i członek PSME o łączeniu dźwięku przestrzennego z grafiką generatywną, instalacjami VR i nowymi środowiskami immersyjnymi.</div>
-                  </div>
-                </div>
-                <div class="session-item">
-                  <div class="session-time">13:10</div>
-                  <div class="session-details">
-                    <div class="session-speaker-name">David Sypniewski</div>
-                    <div class="session-topic">„Jak zaprojektowałem Bota, który nie jest moją zmarłą matką”</div>
-                    <div class="session-desc">Kierownik Zakładu Sztucznej Inteligencji SWPS o obrazie, robotyce, nowych mediach i głębokich dylematach etycznych interakcji człowiek–AI.</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Break -->
-          <div class="act-card break-card">
-            <div class="act-card-header">
-              <div class="act-header-left">
-                <span class="act-badge break">Przerwa</span>
-                <span class="act-time">13:40 – 13:50</span>
-                <div class="act-info">
-                  <h3 class="act-title">Przerwa techniczna (10 min)</h3>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- ACT III -->
-          <div class="act-card" data-category="lectures">
-            <div class="act-card-header">
-              <div class="act-header-left">
-                <span class="act-badge">Akt III</span>
-                <span class="act-time">13:50 – 15:20</span>
-                <div class="act-info">
-                  <h3 class="act-title">AKT III — AI-GENERATED vs AI-ASSISTED</h3>
-                  <div class="act-tagline">„Gdzie kończy się narzędzie, a zaczyna generator?” • Studia przypadków, produkcja i prawo</div>
-                </div>
-              </div>
-              <div class="act-toggle-btn" aria-hidden="true">▼</div>
-            </div>
-            <div class="act-body">
-              <div class="act-sessions-list">
-                <div class="session-item">
-                  <div class="session-time">13:50</div>
-                  <div class="session-details">
-                    <div class="session-speaker-name">Mieszko Mahboob</div>
-                    <div class="session-topic">CASE STUDY: AI w prawdziwej produkcji — Quebonafide / „Futurama 3” / Andrzej Dragan</div>
-                    <div class="session-desc">Konkretny proces produkcyjny z pierwszej linii polskiego rynku fonograficznego i wideo: jak sztuczna inteligencja została wykorzystana w spektakularnym projekcie wizualno-muzycznym.</div>
-                  </div>
-                </div>
-                <div class="session-item">
-                  <div class="session-time">14:15</div>
-                  <div class="session-details">
-                    <div class="session-speaker-name">Mariusz Misiek (x-kom)</div>
-                    <div class="session-topic">SUNO / Czy AI stało się producentem muzycznym?</div>
-                    <div class="session-desc">Head of AI w x-kom analizuje komercyjne generatory muzyczne pod kątem prompt engineeringu, aranżacji i kompresji czasu pracy w studiach reklamowych.</div>
-                  </div>
-                </div>
-                <div class="session-item">
-                  <div class="session-time">14:35</div>
-                  <div class="session-details">
-                    <div class="session-speaker-name">Tomasz Wróblewski (0dB.pl)</div>
-                    <div class="session-topic">Czy AI zmienia tylko narzędzia w studiu, czy również proces twórczy?</div>
-                    <div class="session-desc">Legendarny redaktor naczelny „Estrada i Studio” o wtyczkach DSP, miksie z algorytmami asystującymi i niebezpieczeństwie uniformizacji współczesnego brzmienia.</div>
-                  </div>
-                </div>
-                <div class="session-item">
-                  <div class="session-time">14:55</div>
-                  <div class="session-details">
-                    <div class="session-speaker-name">Krystian Dryniak & Sylwia Wiewiórka-Zyga</div>
-                    <div class="session-topic">AI w biznesie oraz Prawo autorskie w erze sztucznej inteligencji</div>
-                    <div class="session-desc">Zastosowanie AI w marketingu i skalowaniu artystycznym + kluczowe kwestie prawne: unijny AI Act, ochrona wizerunku, praw do głosu i tantiem autorskich.</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Lunch Break -->
-          <div class="act-card break-card">
-            <div class="act-card-header">
-              <div class="act-header-left">
-                <span class="act-badge break">Przerwa</span>
-                <span class="act-time">15:20 – 16:00</span>
-                <div class="act-info">
-                  <h3 class="act-title">Przerwa Obiadowa & Networking (40 min)</h3>
-                  <div class="act-tagline">Ciepły posiłek, networking i swobodne rozmowy z prelegentami w foyer KADR</div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- ACT IV -->
-          <div class="act-card" data-category="demos">
-            <div class="act-card-header">
-              <div class="act-header-left">
-                <span class="act-badge">Akt IV</span>
-                <span class="act-time">16:00 – 16:30</span>
-                <div class="act-info">
-                  <h3 class="act-title">AKT IV — NEUTONE LIVE FROM JAPAN</h3>
-                  <div class="act-tagline">„AI jako instrument w czasie rzeczywistym, a nie offline-generator” • Połączenie z Tokio</div>
-                </div>
-              </div>
-              <div class="act-toggle-btn" aria-hidden="true">▼</div>
-            </div>
-            <div class="act-body">
-              <div class="act-sessions-list">
-                <div class="session-item">
-                  <div class="session-time">16:00</div>
-                  <div class="session-details">
-                    <div class="session-speaker-name">Twórcy platformy NEUTONE (Tokio, Japonia)</div>
-                    <div class="session-topic">Wykorzystanie AI do przetwarzania sygnału instrumentu na żywo</div>
-                    <div class="session-desc">Bezpośrednie połączenie z twórcami wiodącej japońskiej wtyczki open-source łączącej modele deep learningowe ze środowiskami DAW w czasie rzeczywistym z minimalną latencją.</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- ACT V -->
-          <div class="act-card" data-category="demos">
-            <div class="act-card-header">
-              <div class="act-header-left">
-                <span class="act-badge">Akt V</span>
-                <span class="act-time">16:30 – 18:00</span>
-                <div class="act-info">
-                  <h3 class="act-title">AKT V — POKAZY NA ŻYWO & CASE STUDIES</h3>
-                  <div class="act-tagline">Prezentacje sceniczne: perkusja hybrydowa, instrumenty panGeneratora i Piano Odyseja</div>
-                </div>
-              </div>
-              <div class="act-toggle-btn" aria-hidden="true">▼</div>
-            </div>
-            <div class="act-body">
-              <div class="act-sessions-list">
-                <div class="session-item">
-                  <div class="session-time">16:30</div>
-                  <div class="session-details">
-                    <div class="session-speaker-name">Gniewomir Tomczyk</div>
-                    <div class="session-topic">Możliwości wykorzystania AI w pracy koncertowej i dydaktycznej perkusisty</div>
-                    <div class="session-desc">Pokaz na żywo z zestawem perkusyjnym, triggerami i systemem DSP reagującym na dynamikę uderzeń i frazowanie w czasie rzeczywistym.</div>
-                  </div>
-                </div>
-                <div class="session-item">
-                  <div class="session-time">17:00</div>
-                  <div class="session-details">
-                    <div class="session-speaker-name">dr Krzysztof Cybulski</div>
-                    <div class="session-topic">AI a sztuka generatywna / Sprawczość, interpretowalność, namacalność</div>
-                    <div class="session-desc">Laureat prestiżowej Margaret Guthman Musical Instrument Competition prezentuje autorskie obiekty dźwiękowe badające namacalne, mechaniczne aspekty generatywnej kreacji.</div>
-                  </div>
-                </div>
-                <div class="session-item">
-                  <div class="session-time">17:30</div>
-                  <div class="session-details">
-                    <div class="session-speaker-name">Atanas Valkov</div>
-                    <div class="session-topic">Pokaz „Piano Odyseja” — dialog fortepianu akustycznego z modelami AI</div>
-                    <div class="session-desc">Laureat nagrody Berlinale prezentuje nowatorski format, w którym harmoniczna struktura klasycznego fortepianu staje się impulsem do wielowymiarowej transformacji barwowej.</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Break Expo -->
-          <div class="act-card break-card">
-            <div class="act-card-header">
-              <div class="act-header-left">
-                <span class="act-badge break">Przerwa</span>
-                <span class="act-time">18:00 – 18:30</span>
-                <div class="act-info">
-                  <h3 class="act-title">Przerwa Expo & Strefa Wystawców (30 min)</h3>
-                  <div class="act-tagline">Testowanie sprzętu, instalacji dźwiękowych i rozmowy ze sponsorami</div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- ACT VI -->
-          <div class="act-card" data-category="debate">
-            <div class="act-card-header">
-              <div class="act-header-left">
-                <span class="act-badge debate">Akt VI</span>
-                <span class="act-time">18:30 – 19:45</span>
-                <div class="act-info">
-                  <h3 class="act-title">AKT VI — WIELKA DEBATA: KTO DZIŚ TWORZY KULTURĘ?</h3>
-                  <div class="act-tagline">„Artysta, algorytmy i media” • Prowadzenie: Piotr Majewski (RDC / PSJ) + Pytania z sali</div>
-                </div>
-              </div>
-              <div class="act-toggle-btn" aria-hidden="true">▼</div>
-            </div>
-            <div class="act-body">
-              <div class="act-sessions-list">
-                <div class="session-item">
-                  <div class="session-time">18:30</div>
-                  <div class="session-details">
-                    <div class="session-speaker-name">Dyskusja Panelowa</div>
-                    <div class="session-topic">Wielka debata łącząca twórców, dziennikarzy radiowych i ekspertów nowych technologii</div>
-                    <div class="session-desc">
-                      Rozmowa o tym, kto dziś realnie kształtuje kulturę, jak zmienia się rola artysty w świecie sztucznej inteligencji oraz jaki wpływ na odbiór sztuki mają media, algorytmy platform streamingowych i nowe narzędzia technologiczne.
-                    </div>
-                    <div style="margin-top: 12px; font-size: 0.88rem; color: #a5b4fc;">
-                      <strong>Paneliści:</strong> Mieszko Mahboob (Sound Designer, Quebonafide / Dragan), Mariusz Owczarek (Polskie Radio Trójka), Piotr Bielawski (Radio Łódź), Michał Wasilewski (producent muzyczny, XXANAXX, projekt Beksiński.live), Krystian Dryniak (ekspert strategii AI), Marcin Jankowski (Czwórka Polskie Radio), Piotr Iwicki (dziennikarz muzyczny).
+            <!-- Opening -->
+            <div class="act-card expanded" data-category="lectures">
+              <div class="act-card-header">
+                <div class="act-header-left">
+                  <span class="act-badge">Otwarcie</span>
+                  <span class="act-time">10:00 – 10:15</span>
+                  <div class="act-info">
+                    <h3 class="act-title">Oficjalne Otwarcie IV Edycji Konferencji FUTUROPOLIS</h3>
+                    <div class="act-tagline">Powitanie gości i wprowadzenie do idei Człowiek – Technologia – Algorytm
                     </div>
                   </div>
                 </div>
-                <div class="session-item">
-                  <div class="session-time">19:30</div>
-                  <div class="session-details">
-                    <div class="session-speaker-name">Pytania Otwarte od Publiczności (Q&A)</div>
-                    <div class="session-topic">Bezpośrednia interakcja z widownią i prelegentami</div>
-                    <div class="session-desc">15 minut otwartego mikrofonu dla uczestników konferencji w sali widowiskowej.</div>
-                  </div>
-                </div>
+                <div class="act-toggle-btn" aria-hidden="true">▼</div>
               </div>
-            </div>
-          </div>
-
-          <!-- Break Tech -->
-          <div class="act-card break-card">
-            <div class="act-card-header">
-              <div class="act-header-left">
-                <span class="act-badge break">Przerwa</span>
-                <span class="act-time">19:45 – 20:00</span>
-                <div class="act-info">
-                  <h3 class="act-title">Przerwa techniczna przed koncertem (15 min)</h3>
-                  <div class="act-tagline">Przygotowanie sceny i instrumentarium perkusyjno-wizualnego do widowiska LIRAEL-9</div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- ACT VII -->
-          <div class="act-card expanded" data-category="concert">
-            <div class="act-card-header">
-              <div class="act-header-left">
-                <span class="act-badge concert">Akt VII</span>
-                <span class="act-time">20:00 – 21:00</span>
-                <div class="act-info">
-                  <h3 class="act-title">AKT VII — KONCERT FINAŁOWY: LIRAEL-9 & FINAŁ</h3>
-                  <div class="act-tagline">Multimedialny spektakl audiowizualny: perkusje hybrydowe, elektronika, taniec i AI</div>
-                </div>
-              </div>
-              <div class="act-toggle-btn" aria-hidden="true">▼</div>
-            </div>
-            <div class="act-body">
-              <div class="act-sessions-list">
-                <div class="session-item">
-                  <div class="session-time">20:00</div>
-                  <div class="session-details">
-                    <div class="session-speaker-name">Gniewomir Tomczyk, Miłosz Pękala, Bartek Miler, Julianna Seidler-Smuga</div>
-                    <div class="session-topic">Spektakl koncertowy „LIRAEL-9” z udziałem grupy tanecznej pod kierunkiem Kingi Rolki</div>
-                    <div class="session-desc">
-                      Dziewięcioczęściowa opowieść dźwiękowo-ruchowa oparta na dialogu człowieka z rozwijającymi się systemami sztucznej inteligencji. Połączenie wibrafonów, marimb, perkusji akustycznej i syntezy granularnej z choreografią tancerzy Akademii Muzycznej w Krakowie.
+              <div class="act-body">
+                <div class="act-sessions-list">
+                  <div class="session-item">
+                    <div class="session-time">10:00</div>
+                    <div class="session-details">
+                      <div class="session-speaker-name">Gniewomir Tomczyk</div>
+                      <div class="session-topic">Wprowadzenie w założenia programowe IV edycji Futuropolis</div>
+                      <div class="session-desc">Dlaczego tegoroczna odsłona odbywa się pod hasłem Sztuka, Człowiek i
+                        Technologia? Przedstawienie prelegentów, partnerów oraz struktury 7 Aktów wydarzenia.</div>
                     </div>
                   </div>
                 </div>
-                <div class="session-item">
-                  <div class="session-time">20:55</div>
-                  <div class="session-details">
-                    <div class="session-speaker-name">Finał, Podziękowania i Zakończenie IV Edycji</div>
-                    <div class="session-topic">Wspólne zdjęcia, pamiątkowe podsumowanie i zaproszenie na networking kuluarowy</div>
+              </div>
+            </div>
+
+            <!-- ACT I -->
+            <div class="act-card expanded" data-category="lectures">
+              <div class="act-card-header">
+                <div class="act-header-left">
+                  <span class="act-badge">Akt I</span>
+                  <span class="act-time">10:15 – 11:45</span>
+                  <div class="act-info">
+                    <h3 class="act-title">AKT I — CZŁOWIEK / TWÓRCA / AUTENTYCZNOŚĆ</h3>
+                    <div class="act-tagline">Ludzka perspektywa, improwizacja, unikalny język artystyczny w dobie
+                      syntetycznej doskonałości</div>
+                  </div>
+                </div>
+                <div class="act-toggle-btn" aria-hidden="true">▼</div>
+              </div>
+              <div class="act-body">
+                <div class="act-sessions-list">
+                  <div class="session-item">
+                    <div class="session-time">10:15</div>
+                    <div class="session-details">
+                      <div class="session-speaker-name">Janusz Stokłosa</div>
+                      <div class="session-topic">Perspektywa kompozytora, doświadczenie twórcze, zmiany technologiczne w
+                        muzyce</div>
+                      <div class="session-desc">Twórca muzyki do musicalu „Metro” (nominowanego do nagrody Tony na
+                        Broadwayu) o rewolucjach technologicznych, których był świadkiem, oraz o tym, co decyduje o sile
+                        melodii i emocji w kompozycji.</div>
+                    </div>
+                  </div>
+                  <div class="session-item">
+                    <div class="session-time">10:45</div>
+                    <div class="session-details">
+                      <div class="session-speaker-name">Natalia Kordiak</div>
+                      <div class="session-topic">Twórca, improwizacja, własny język, indywidualność i autentyczność
+                        wobec AI</div>
+                      <div class="session-desc">Sztuka błędu: swobodna improwizacja ludzkiego głosu wobec imitacji
+                        spontaniczności i przewidywalnej perfekcji algorytmów. Jak zachować tożsamość wokalną?</div>
+                    </div>
+                  </div>
+                  <div class="session-item">
+                    <div class="session-time">11:15</div>
+                    <div class="session-details">
+                      <div class="session-speaker-name">Bartozzi Wojciechowski</div>
+                      <div class="session-topic">Twórczość współczesna / technologia / nowe sposoby pracy artysty</div>
+                      <div class="session-desc">Ceniony basista i pedagog o rewolucji cyfryzacji rynku muzycznego, rysie
+                        historycznym oraz nowym warsztacie muzyka estradowego współpracującego z technologią hybrydową.
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
 
-        </div>
+            <!-- Break -->
+            <div class="act-card break-card">
+              <div class="act-card-header">
+                <div class="act-header-left">
+                  <span class="act-badge break">Przerwa</span>
+                  <span class="act-time">11:45 – 11:55</span>
+                  <div class="act-info">
+                    <h3 class="act-title">Przerwa networkingowa (10 min)</h3>
+                    <div class="act-tagline">Kawa, kuluarowe dyskusje i zapoznanie się ze strefą partnerów</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- ACT II -->
+            <div class="act-card" data-category="lectures">
+              <div class="act-card-header">
+                <div class="act-header-left">
+                  <span class="act-badge">Akt II</span>
+                  <span class="act-time">11:55 – 13:40</span>
+                  <div class="act-info">
+                    <h3 class="act-title">AKT II — MASZYNA / TECHNOLOGIA / NOWE NARZĘDZIA</h3>
+                    <div class="act-tagline">Architektura uczenia maszynowego, sieci neuronowe, eksperymenty cyfrowe i
+                      robotyka sceniczna</div>
+                  </div>
+                </div>
+                <div class="act-toggle-btn" aria-hidden="true">▼</div>
+              </div>
+              <div class="act-body">
+                <div class="act-sessions-list">
+                  <div class="session-item">
+                    <div class="session-time">11:55</div>
+                    <div class="session-details">
+                      <div class="session-speaker-name">Borys Stokalski</div>
+                      <div class="session-topic">Szersza perspektywa AI: dokąd zmierza technologia i jak zmienia
+                        kulturę?</div>
+                      <div class="session-desc">Współzałożyciel Infovide-Matrix i inwestor deeptech o trendach w
+                        modelach multimodalnych, agentach autonomicznych i redefinicji kapitału kreatywnego.</div>
+                    </div>
+                  </div>
+                  <div class="session-item">
+                    <div class="session-time">12:20</div>
+                    <div class="session-details">
+                      <div class="session-speaker-name">dr inż. Mateusz Modrzejewski</div>
+                      <div class="session-topic">AI i uczenie maszynowe w muzyce: od kodu do performansu</div>
+                      <div class="session-desc">Naukowiec Politechniki Warszawskiej i b. inżynier Apple Music ML
+                        prezentuje techniczne kulisy działania sieci generujących audio oraz możliwości analizy rytmu na
+                        żywo.</div>
+                    </div>
+                  </div>
+                  <div class="session-item">
+                    <div class="session-time">12:45</div>
+                    <div class="session-details">
+                      <div class="session-speaker-name">Dariusz Makaruk</div>
+                      <div class="session-topic">AI, eksperyment, sztuka cyfrowa i nowe sposoby tworzenia</div>
+                      <div class="session-desc">Artysta multimedialny i członek PSME o łączeniu dźwięku przestrzennego z
+                        grafiką generatywną, instalacjami VR i nowymi środowiskami immersyjnymi.</div>
+                    </div>
+                  </div>
+                  <div class="session-item">
+                    <div class="session-time">13:10</div>
+                    <div class="session-details">
+                      <div class="session-speaker-name">David Sypniewski</div>
+                      <div class="session-topic">„Jak zaprojektowałem Bota, który nie jest moją zmarłą matką”</div>
+                      <div class="session-desc">Kierownik Zakładu Sztucznej Inteligencji SWPS o obrazie, robotyce,
+                        nowych mediach i głębokich dylematach etycznych interakcji człowiek–AI.</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Break -->
+            <div class="act-card break-card">
+              <div class="act-card-header">
+                <div class="act-header-left">
+                  <span class="act-badge break">Przerwa</span>
+                  <span class="act-time">13:40 – 13:50</span>
+                  <div class="act-info">
+                    <h3 class="act-title">Przerwa techniczna (10 min)</h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- ACT III -->
+            <div class="act-card" data-category="lectures">
+              <div class="act-card-header">
+                <div class="act-header-left">
+                  <span class="act-badge">Akt III</span>
+                  <span class="act-time">13:50 – 15:20</span>
+                  <div class="act-info">
+                    <h3 class="act-title">AKT III — AI-GENERATED vs AI-ASSISTED</h3>
+                    <div class="act-tagline">„Gdzie kończy się narzędzie, a zaczyna generator?” • Studia przypadków,
+                      produkcja i prawo</div>
+                  </div>
+                </div>
+                <div class="act-toggle-btn" aria-hidden="true">▼</div>
+              </div>
+              <div class="act-body">
+                <div class="act-sessions-list">
+                  <div class="session-item">
+                    <div class="session-time">13:50</div>
+                    <div class="session-details">
+                      <div class="session-speaker-name">Mieszko Mahboob</div>
+                      <div class="session-topic">CASE STUDY: AI w prawdziwej produkcji — Quebonafide / „Futurama 3” /
+                        Andrzej Dragan</div>
+                      <div class="session-desc">Konkretny proces produkcyjny z pierwszej linii polskiego rynku
+                        fonograficznego i wideo: jak sztuczna inteligencja została wykorzystana w spektakularnym
+                        projekcie wizualno-muzycznym.</div>
+                    </div>
+                  </div>
+                  <div class="session-item">
+                    <div class="session-time">14:15</div>
+                    <div class="session-details">
+                      <div class="session-speaker-name">Mariusz Misiek (x-kom)</div>
+                      <div class="session-topic">SUNO / Czy AI stało się producentem muzycznym?</div>
+                      <div class="session-desc">Head of AI w x-kom analizuje komercyjne generatory muzyczne pod kątem
+                        prompt engineeringu, aranżacji i kompresji czasu pracy w studiach reklamowych.</div>
+                    </div>
+                  </div>
+                  <div class="session-item">
+                    <div class="session-time">14:35</div>
+                    <div class="session-details">
+                      <div class="session-speaker-name">Tomasz Wróblewski (0dB.pl)</div>
+                      <div class="session-topic">Czy AI zmienia tylko narzędzia w studiu, czy również proces twórczy?
+                      </div>
+                      <div class="session-desc">Legendarny redaktor naczelny „Estrada i Studio” o wtyczkach DSP, miksie
+                        z algorytmami asystującymi i niebezpieczeństwie uniformizacji współczesnego brzmienia.</div>
+                    </div>
+                  </div>
+                  <div class="session-item">
+                    <div class="session-time">14:55</div>
+                    <div class="session-details">
+                      <div class="session-speaker-name">Krystian Dryniak & Sylwia Wiewiórka-Zyga</div>
+                      <div class="session-topic">AI w biznesie oraz Prawo autorskie w erze sztucznej inteligencji</div>
+                      <div class="session-desc">Zastosowanie AI w marketingu i skalowaniu artystycznym + kluczowe
+                        kwestie prawne: unijny AI Act, ochrona wizerunku, praw do głosu i tantiem autorskich.</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Lunch Break -->
+            <div class="act-card break-card">
+              <div class="act-card-header">
+                <div class="act-header-left">
+                  <span class="act-badge break">Przerwa</span>
+                  <span class="act-time">15:20 – 16:00</span>
+                  <div class="act-info">
+                    <h3 class="act-title">Przerwa Obiadowa & Networking (40 min)</h3>
+                    <div class="act-tagline">Ciepły posiłek, networking i swobodne rozmowy z prelegentami w foyer KADR
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- ACT IV -->
+            <div class="act-card" data-category="demos">
+              <div class="act-card-header">
+                <div class="act-header-left">
+                  <span class="act-badge">Akt IV</span>
+                  <span class="act-time">16:00 – 16:30</span>
+                  <div class="act-info">
+                    <h3 class="act-title">AKT IV — NEUTONE LIVE FROM JAPAN</h3>
+                    <div class="act-tagline">„AI jako instrument w czasie rzeczywistym, a nie offline-generator” •
+                      Połączenie z Tokio</div>
+                  </div>
+                </div>
+                <div class="act-toggle-btn" aria-hidden="true">▼</div>
+              </div>
+              <div class="act-body">
+                <div class="act-sessions-list">
+                  <div class="session-item">
+                    <div class="session-time">16:00</div>
+                    <div class="session-details">
+                      <div class="session-speaker-name">Twórcy platformy NEUTONE (Tokio, Japonia)</div>
+                      <div class="session-topic">Wykorzystanie AI do przetwarzania sygnału instrumentu na żywo</div>
+                      <div class="session-desc">Bezpośrednie połączenie z twórcami wiodącej japońskiej wtyczki
+                        open-source łączącej modele deep learningowe ze środowiskami DAW w czasie rzeczywistym z
+                        minimalną latencją.</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- ACT V -->
+            <div class="act-card" data-category="demos">
+              <div class="act-card-header">
+                <div class="act-header-left">
+                  <span class="act-badge">Akt V</span>
+                  <span class="act-time">16:30 – 18:00</span>
+                  <div class="act-info">
+                    <h3 class="act-title">AKT V — POKAZY NA ŻYWO & CASE STUDIES</h3>
+                    <div class="act-tagline">Prezentacje sceniczne: perkusja hybrydowa, instrumenty panGeneratora i
+                      Piano Odyseja</div>
+                  </div>
+                </div>
+                <div class="act-toggle-btn" aria-hidden="true">▼</div>
+              </div>
+              <div class="act-body">
+                <div class="act-sessions-list">
+                  <div class="session-item">
+                    <div class="session-time">16:30</div>
+                    <div class="session-details">
+                      <div class="session-speaker-name">Gniewomir Tomczyk</div>
+                      <div class="session-topic">Możliwości wykorzystania AI w pracy koncertowej i dydaktycznej
+                        perkusisty</div>
+                      <div class="session-desc">Pokaz na żywo z zestawem perkusyjnym, triggerami i systemem DSP
+                        reagującym na dynamikę uderzeń i frazowanie w czasie rzeczywistym.</div>
+                    </div>
+                  </div>
+                  <div class="session-item">
+                    <div class="session-time">17:00</div>
+                    <div class="session-details">
+                      <div class="session-speaker-name">dr Krzysztof Cybulski</div>
+                      <div class="session-topic">AI a sztuka generatywna / Sprawczość, interpretowalność, namacalność
+                      </div>
+                      <div class="session-desc">Laureat prestiżowej Margaret Guthman Musical Instrument Competition
+                        prezentuje autorskie obiekty dźwiękowe badające namacalne, mechaniczne aspekty generatywnej
+                        kreacji.</div>
+                    </div>
+                  </div>
+                  <div class="session-item">
+                    <div class="session-time">17:30</div>
+                    <div class="session-details">
+                      <div class="session-speaker-name">Atanas Valkov</div>
+                      <div class="session-topic">Pokaz „Piano Odyseja” — dialog fortepianu akustycznego z modelami AI
+                      </div>
+                      <div class="session-desc">Laureat nagrody Berlinale prezentuje nowatorski format, w którym
+                        harmoniczna struktura klasycznego fortepianu staje się impulsem do wielowymiarowej transformacji
+                        barwowej.</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Break Expo -->
+            <div class="act-card break-card">
+              <div class="act-card-header">
+                <div class="act-header-left">
+                  <span class="act-badge break">Przerwa</span>
+                  <span class="act-time">18:00 – 18:30</span>
+                  <div class="act-info">
+                    <h3 class="act-title">Przerwa Expo & Strefa Wystawców (30 min)</h3>
+                    <div class="act-tagline">Testowanie sprzętu, instalacji dźwiękowych i rozmowy ze sponsorami</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- ACT VI -->
+            <div class="act-card" data-category="debate">
+              <div class="act-card-header">
+                <div class="act-header-left">
+                  <span class="act-badge debate">Akt VI</span>
+                  <span class="act-time">18:30 – 19:45</span>
+                  <div class="act-info">
+                    <h3 class="act-title">AKT VI — WIELKA DEBATA: KTO DZIŚ TWORZY KULTURĘ?</h3>
+                    <div class="act-tagline">„Artysta, algorytmy i media” • Prowadzenie: Piotr Majewski (RDC / PSJ) +
+                      Pytania z sali</div>
+                  </div>
+                </div>
+                <div class="act-toggle-btn" aria-hidden="true">▼</div>
+              </div>
+              <div class="act-body">
+                <div class="act-sessions-list">
+                  <div class="session-item">
+                    <div class="session-time">18:30</div>
+                    <div class="session-details">
+                      <div class="session-speaker-name">Dyskusja Panelowa</div>
+                      <div class="session-topic">Wielka debata łącząca twórców, dziennikarzy radiowych i ekspertów
+                        nowych technologii</div>
+                      <div class="session-desc">
+                        Rozmowa o tym, kto dziś realnie kształtuje kulturę, jak zmienia się rola artysty w świecie
+                        sztucznej inteligencji oraz jaki wpływ na odbiór sztuki mają media, algorytmy platform
+                        streamingowych i nowe narzędzia technologiczne.
+                      </div>
+                      <div style="margin-top: 12px; font-size: 0.88rem; color: #a5b4fc;">
+                        <strong>Paneliści:</strong> Mieszko Mahboob (Sound Designer, Quebonafide / Dragan), Mariusz
+                        Owczarek (Polskie Radio Trójka), Piotr Bielawski (Radio Łódź), Michał Wasilewski (producent
+                        muzyczny, XXANAXX, projekt Beksiński.live), Krystian Dryniak (ekspert strategii AI), Marcin
+                        Jankowski (Czwórka Polskie Radio), Piotr Iwicki (dziennikarz muzyczny).
+                      </div>
+                    </div>
+                  </div>
+                  <div class="session-item">
+                    <div class="session-time">19:30</div>
+                    <div class="session-details">
+                      <div class="session-speaker-name">Pytania Otwarte od Publiczności (Q&A)</div>
+                      <div class="session-topic">Bezpośrednia interakcja z widownią i prelegentami</div>
+                      <div class="session-desc">15 minut otwartego mikrofonu dla uczestników konferencji w sali
+                        widowiskowej.</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Break Tech -->
+            <div class="act-card break-card">
+              <div class="act-card-header">
+                <div class="act-header-left">
+                  <span class="act-badge break">Przerwa</span>
+                  <span class="act-time">19:45 – 20:00</span>
+                  <div class="act-info">
+                    <h3 class="act-title">Przerwa techniczna przed koncertem (15 min)</h3>
+                    <div class="act-tagline">Przygotowanie sceny i instrumentarium perkusyjno-wizualnego do widowiska
+                      LIRAEL-9</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- ACT VII -->
+            <div class="act-card expanded" data-category="concert">
+              <div class="act-card-header">
+                <div class="act-header-left">
+                  <span class="act-badge concert">Akt VII</span>
+                  <span class="act-time">20:00 – 21:00</span>
+                  <div class="act-info">
+                    <h3 class="act-title">AKT VII — KONCERT FINAŁOWY: LIRAEL-9 & FINAŁ</h3>
+                    <div class="act-tagline">Multimedialny spektakl audiowizualny: perkusje hybrydowe, elektronika,
+                      taniec i AI</div>
+                  </div>
+                </div>
+                <div class="act-toggle-btn" aria-hidden="true">▼</div>
+              </div>
+              <div class="act-body">
+                <div class="act-sessions-list">
+                  <div class="session-item">
+                    <div class="session-time">20:00</div>
+                    <div class="session-details">
+                      <div class="session-speaker-name">Gniewomir Tomczyk, Miłosz Pękala, Bartek Miler, Julianna
+                        Seidler-Smuga</div>
+                      <div class="session-topic">Spektakl koncertowy „LIRAEL-9” z udziałem grupy tanecznej pod
+                        kierunkiem Kingi Rolki</div>
+                      <div class="session-desc">
+                        Dziewięcioczęściowa opowieść dźwiękowo-ruchowa oparta na dialogu człowieka z rozwijającymi się
+                        systemami sztucznej inteligencji. Połączenie wibrafonów, marimb, perkusji akustycznej i syntezy
+                        granularnej z choreografią tancerzy Akademii Muzycznej w Krakowie.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="session-item">
+                    <div class="session-time">20:55</div>
+                    <div class="session-details">
+                      <div class="session-speaker-name">Finał, Podziękowania i Zakończenie IV Edycji</div>
+                      <div class="session-topic">Wspólne zdjęcia, pamiątkowe podsumowanie i zaproszenie na networking
+                        kuluarowy</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
         </div>
       </div>
     </section>
@@ -802,7 +892,8 @@
           <span class="section-tag">Grono Ekspertów</span>
           <h2 class="section-title">Prelegenci i Wykonawcy</h2>
           <p class="section-desc">
-            Spotkaj wybitne osobowości polskiej kultury, kompozytorów, inżynierów sztucznej inteligencji, dziennikarzy i prawników. Kliknij w kartę, aby poznać pełną biografię.
+            Spotkaj wybitne osobowości polskiej kultury, kompozytorów, inżynierów sztucznej inteligencji, dziennikarzy i
+            prawników. Kliknij w kartę, aby poznać pełną biografię.
           </p>
         </div>
 
@@ -820,7 +911,8 @@
           <!-- 1. Gniewomir Tomczyk -->
           <article class="speaker-card" data-speaker-id="gniewomir-tomczyk" data-category="music" tabindex="0">
             <div class="speaker-image-wrapper">
-              <img src="assets/speakers/Gniewomir Tomczyk.jpg" alt="Gniewomir Tomczyk" class="speaker-img" loading="lazy">
+              <img src="assets/speakers/Gniewomir Tomczyk.jpg" alt="Gniewomir Tomczyk" class="speaker-img"
+                loading="lazy">
               <div class="speaker-overlay"></div>
               <span class="speaker-badge">Inicjator</span>
             </div>
@@ -828,7 +920,8 @@
               <h3 class="speaker-name">Gniewomir Tomczyk</h3>
               <div class="speaker-role">Perkusista, kompozytor, producent, wiceprezes PSJ</div>
               <div class="speaker-topic-tag">Pokaz: AI w pracy artystycznej, dydaktycznej i koncertowej</div>
-              <p class="speaker-bio-snip">Twórca Futuropolis łączący perkusję akustyczną i hybrydową ze sztuczną inteligencją w czasie rzeczywistym.</p>
+              <p class="speaker-bio-snip">Twórca Futuropolis łączący perkusję akustyczną i hybrydową ze sztuczną
+                inteligencją w czasie rzeczywistym.</p>
               <div class="speaker-card-footer">
                 <span class="btn-read-bio">Pełny biogram <span aria-hidden="true">→</span></span>
               </div>
@@ -846,7 +939,8 @@
               <h3 class="speaker-name">Grzegorz Stec</h3>
               <div class="speaker-role">Inżynier dźwięku, architekt systemów audio & AI</div>
               <div class="speaker-topic-tag">Integracja systemów elektronicznych i algorytmów AI na scenie</div>
-              <p class="speaker-bio-snip">Odpowiada za warstwę technologiczną, spójność brzmieniową i live-processing w widowisku Lirael-9.</p>
+              <p class="speaker-bio-snip">Odpowiada za warstwę technologiczną, spójność brzmieniową i live-processing w
+                widowisku Lirael-9.</p>
               <div class="speaker-card-footer">
                 <span class="btn-read-bio">Pełny biogram <span aria-hidden="true">→</span></span>
               </div>
@@ -864,7 +958,8 @@
               <h3 class="speaker-name">Janusz Stokłosa</h3>
               <div class="speaker-role">Kompozytor, pianista, twórca musicalu „Metro” (Broadway Tony)</div>
               <div class="speaker-topic-tag">Wykład: Doświadczenie twórcze a zmiany technologiczne w muzyce</div>
-              <p class="speaker-bio-snip">Autor ponad 200 partytur teatralnych i filmowych. Ikona polskiego teatru muzycznego i współzałożyciel Studia Buffo.</p>
+              <p class="speaker-bio-snip">Autor ponad 200 partytur teatralnych i filmowych. Ikona polskiego teatru
+                muzycznego i współzałożyciel Studia Buffo.</p>
               <div class="speaker-card-footer">
                 <span class="btn-read-bio">Pełny biogram <span aria-hidden="true">→</span></span>
               </div>
@@ -882,7 +977,8 @@
               <h3 class="speaker-name">Natalia Kordiak</h3>
               <div class="speaker-role">Wokalistka jazzowa, improwizatorka, kompozytorka</div>
               <div class="speaker-topic-tag">Wykład: Twórca, improwizacja, własny język i autentyczność wobec AI</div>
-              <p class="speaker-bio-snip">Liderka Natalia Kordiak Quintet (nominacja do Fryderyka za album „Bajka”), traktująca ludzki głos jako pole do badań brzmieniowych.</p>
+              <p class="speaker-bio-snip">Liderka Natalia Kordiak Quintet (nominacja do Fryderyka za album „Bajka”),
+                traktująca ludzki głos jako pole do badań brzmieniowych.</p>
               <div class="speaker-card-footer">
                 <span class="btn-read-bio">Pełny biogram <span aria-hidden="true">→</span></span>
               </div>
@@ -892,7 +988,8 @@
           <!-- 5. Bartozzi Wojciechowski -->
           <article class="speaker-card" data-speaker-id="bartozzi-wojciechowski" data-category="music" tabindex="0">
             <div class="speaker-image-wrapper">
-              <img src="assets/speakers/Bartozzi Wojciechowski.jpg" alt="Bartozzi Wojciechowski" class="speaker-img" loading="lazy">
+              <img src="assets/speakers/Bartozzi Wojciechowski.jpg" alt="Bartozzi Wojciechowski" class="speaker-img"
+                loading="lazy">
               <div class="speaker-overlay"></div>
               <span class="speaker-badge">Basista</span>
             </div>
@@ -900,7 +997,8 @@
               <h3 class="speaker-name">Bartozzi Wojciechowski</h3>
               <div class="speaker-role">Basista, kompozytor, pedagog (Stańko, Sadowska, Lipnicka)</div>
               <div class="speaker-topic-tag">Wykład: Nowe sposoby pracy artysty na scenie i w studiu</div>
-              <p class="speaker-bio-snip">Eksploruje styki jazzu, funku i muzyki eksperymentalnej z wykorzystaniem nowoczesnych narzędzi hybrydowych.</p>
+              <p class="speaker-bio-snip">Eksploruje styki jazzu, funku i muzyki eksperymentalnej z wykorzystaniem
+                nowoczesnych narzędzi hybrydowych.</p>
               <div class="speaker-card-footer">
                 <span class="btn-read-bio">Pełny biogram <span aria-hidden="true">→</span></span>
               </div>
@@ -918,7 +1016,8 @@
               <h3 class="speaker-name">Borys Stokalski</h3>
               <div class="speaker-role">Ekspert AI & Deeptech, inwestor, Infovide-Matrix</div>
               <div class="speaker-topic-tag">Wykład: Dokąd zmierza technologia i jak zmienia kulturę cyfrową?</div>
-              <p class="speaker-bio-snip">Przedsiębiorca z 30-letnim stażem, mentor startupów AI i ekspert międzynarodowego Cutter Consortium.</p>
+              <p class="speaker-bio-snip">Przedsiębiorca z 30-letnim stażem, mentor startupów AI i ekspert
+                międzynarodowego Cutter Consortium.</p>
               <div class="speaker-card-footer">
                 <span class="btn-read-bio">Pełny biogram <span aria-hidden="true">→</span></span>
               </div>
@@ -928,7 +1027,8 @@
           <!-- 7. Mateusz Modrzejewski -->
           <article class="speaker-card" data-speaker-id="mateusz-modrzejewski" data-category="tech" tabindex="0">
             <div class="speaker-image-wrapper">
-              <img src="assets/speakers/Mateusz Modrzejewski.jpg" alt="Mateusz Modrzejewski" class="speaker-img" loading="lazy">
+              <img src="assets/speakers/Mateusz Modrzejewski.jpg" alt="Mateusz Modrzejewski" class="speaker-img"
+                loading="lazy">
               <div class="speaker-overlay"></div>
               <span class="speaker-badge">PW / Apple ML</span>
             </div>
@@ -936,7 +1036,8 @@
               <h3 class="speaker-name">dr inż. Mateusz Modrzejewski</h3>
               <div class="speaker-role">Naukowiec Politechniki Warszawskiej, b. Apple Music ML, perkusista</div>
               <div class="speaker-topic-tag">Wykład: AI i uczenie maszynowe w muzyce — od kodu do sceny</div>
-              <p class="speaker-bio-snip">Łączy badania nad sieciami neuronowymi audio z doświadczeniem ponad 600 zagranych koncertów na scenach muzycznych.</p>
+              <p class="speaker-bio-snip">Łączy badania nad sieciami neuronowymi audio z doświadczeniem ponad 600
+                zagranych koncertów na scenach muzycznych.</p>
               <div class="speaker-card-footer">
                 <span class="btn-read-bio">Pełny biogram <span aria-hidden="true">→</span></span>
               </div>
@@ -954,7 +1055,8 @@
               <h3 class="speaker-name">Dariusz Makaruk</h3>
               <div class="speaker-role">Kompozytor muzyki elektroakustycznej, artysta VR (PSME)</div>
               <div class="speaker-topic-tag">Wykład: AI, eksperyment, sztuka cyfrowa i immersja dźwiękowa</div>
-              <p class="speaker-bio-snip">Twórca instalacji audiowizualnych prezentowanych w Europie i Azji, laureat konkursów sztuki cyfrowej.</p>
+              <p class="speaker-bio-snip">Twórca instalacji audiowizualnych prezentowanych w Europie i Azji, laureat
+                konkursów sztuki cyfrowej.</p>
               <div class="speaker-card-footer">
                 <span class="btn-read-bio">Pełny biogram <span aria-hidden="true">→</span></span>
               </div>
@@ -964,7 +1066,8 @@
           <!-- 9. David Sypniewski -->
           <article class="speaker-card" data-speaker-id="david-sypniewski" data-category="tech" tabindex="0">
             <div class="speaker-image-wrapper">
-              <img src="assets/speakers/David Sypniewski.webp" alt="David Sypniewski" class="speaker-img" loading="lazy">
+              <img src="assets/speakers/David Sypniewski.webp" alt="David Sypniewski" class="speaker-img"
+                loading="lazy">
               <div class="speaker-overlay"></div>
               <span class="speaker-badge">SWPS</span>
             </div>
@@ -972,7 +1075,8 @@
               <h3 class="speaker-name">David Sypniewski</h3>
               <div class="speaker-role">Kierownik Zakładu Sztucznej Inteligencji Uniwersytetu SWPS</div>
               <div class="speaker-topic-tag">Wykład: „Jak zaprojektowałem Bota, który nie jest moją zmarłą matką”</div>
-              <p class="speaker-bio-snip">Bada relacje człowiek–maszyna, creative coding i odpowiedzialne wdrażanie modeli generatywnych w projektowaniu.</p>
+              <p class="speaker-bio-snip">Bada relacje człowiek–maszyna, creative coding i odpowiedzialne wdrażanie
+                modeli generatywnych w projektowaniu.</p>
               <div class="speaker-card-footer">
                 <span class="btn-read-bio">Pełny biogram <span aria-hidden="true">→</span></span>
               </div>
@@ -982,15 +1086,18 @@
           <!-- 10. Sylwia Wiewiórka-Zyga -->
           <article class="speaker-card" data-speaker-id="sylwia-wiewiorka-zyga" data-category="business" tabindex="0">
             <div class="speaker-image-wrapper">
-              <img src="assets/speakers/Sylwia Wiewiórka Zyga.jpg" alt="Sylwia Wiewiórka-Zyga" class="speaker-img" loading="lazy">
+              <img src="assets/speakers/Sylwia Wiewiorka Zyga.jpg" alt="Sylwia Wiewiórka-Zyga" class="speaker-img"
+                loading="lazy">
               <div class="speaker-overlay"></div>
               <span class="speaker-badge">Prawo AI</span>
             </div>
             <div class="speaker-content">
               <h3 class="speaker-name">Sylwia Wiewiórka-Zyga</h3>
               <div class="speaker-role">Radca prawny, Komisja Prawa Autorskiego X kadencji</div>
-              <div class="speaker-topic-tag">Wykład: Prawo autorskie w dobie modeli generatywnych i unijnego AI Act</div>
-              <p class="speaker-bio-snip">Doradza twórcom i instytucjom kultury w zakresie ochrony własności intelektualnej i licencjonowania danych treningowych.</p>
+              <div class="speaker-topic-tag">Wykład: Prawo autorskie w dobie modeli generatywnych i unijnego AI Act
+              </div>
+              <p class="speaker-bio-snip">Doradza twórcom i instytucjom kultury w zakresie ochrony własności
+                intelektualnej i licencjonowania danych treningowych.</p>
               <div class="speaker-card-footer">
                 <span class="btn-read-bio">Pełny biogram <span aria-hidden="true">→</span></span>
               </div>
@@ -1008,7 +1115,8 @@
               <h3 class="speaker-name">Mariusz Misiek</h3>
               <div class="speaker-role">Head of AI w x-kom, ekspert modeli autonomicznych</div>
               <div class="speaker-topic-tag">Wykład: SUNO / Czy AI stało się samodzielnym producentem?</div>
-              <p class="speaker-bio-snip">25 lat w branży IT, implementacje systemów agentowych i praktyczna dekonstrukcja algorytmów audio.</p>
+              <p class="speaker-bio-snip">25 lat w branży IT, implementacje systemów agentowych i praktyczna
+                dekonstrukcja algorytmów audio.</p>
               <div class="speaker-card-footer">
                 <span class="btn-read-bio">Pełny biogram <span aria-hidden="true">→</span></span>
               </div>
@@ -1018,15 +1126,18 @@
           <!-- 12. Tomasz Wróblewski -->
           <article class="speaker-card" data-speaker-id="tomasz-wroblewski" data-category="tech" tabindex="0">
             <div class="speaker-image-wrapper">
-              <img src="assets/speakers/Tomasz Wróblewski.jpg" alt="Tomasz Wróblewski" class="speaker-img" loading="lazy">
+              <img src="assets/speakers/Tomasz Wroblewski.jpg" alt="Tomasz Wróblewski" class="speaker-img"
+                loading="lazy">
               <div class="speaker-overlay"></div>
               <span class="speaker-badge">0dB.pl</span>
             </div>
             <div class="speaker-content">
               <h3 class="speaker-name">Tomasz Wróblewski</h3>
               <div class="speaker-role">Twórca 0dB.pl, b. redaktor naczelny „Estrada i Studio”</div>
-              <div class="speaker-topic-tag">Wykład: Czy AI zmienia narzędzia miksu, czy proces myślenia o dźwięku?</div>
-              <p class="speaker-bio-snip">Przez 25 lat kształtował wiedzę producentów dźwięku w Polsce. Autorytet w inżynierii audio i technologii studyjnej.</p>
+              <div class="speaker-topic-tag">Wykład: Czy AI zmienia narzędzia miksu, czy proces myślenia o dźwięku?
+              </div>
+              <p class="speaker-bio-snip">Przez 25 lat kształtował wiedzę producentów dźwięku w Polsce. Autorytet w
+                inżynierii audio i technologii studyjnej.</p>
               <div class="speaker-card-footer">
                 <span class="btn-read-bio">Pełny biogram <span aria-hidden="true">→</span></span>
               </div>
@@ -1044,7 +1155,8 @@
               <h3 class="speaker-name">Atanas Valkov</h3>
               <div class="speaker-role">Kompozytor muzyki filmowej i gier (Belfer, Berlinale Award)</div>
               <div class="speaker-topic-tag">Pokaz Live: Piano Odyseja — fortepian z modelami DSP Neutone</div>
-              <p class="speaker-bio-snip">Łączy klasyczny warsztat pianisty z syntezą modularną i najnowocześniejszymi wtyczkami sztucznej inteligencji.</p>
+              <p class="speaker-bio-snip">Łączy klasyczny warsztat pianisty z syntezą modularną i najnowocześniejszymi
+                wtyczkami sztucznej inteligencji.</p>
               <div class="speaker-card-footer">
                 <span class="btn-read-bio">Pełny biogram <span aria-hidden="true">→</span></span>
               </div>
@@ -1054,15 +1166,18 @@
           <!-- 14. dr Krzysztof Cybulski -->
           <article class="speaker-card" data-speaker-id="krzysztof-cybulski" data-category="music" tabindex="0">
             <div class="speaker-image-wrapper">
-              <img src="assets/speakers/Krzysztof Cybulski.webp" alt="Krzysztof Cybulski" class="speaker-img" loading="lazy">
+              <img src="assets/speakers/Krzysztof Cybulski.webp" alt="Krzysztof Cybulski" class="speaker-img"
+                loading="lazy">
               <div class="speaker-overlay"></div>
               <span class="speaker-badge">panGenerator</span>
             </div>
             <div class="speaker-content">
               <h3 class="speaker-name">dr Krzysztof Cybulski</h3>
               <div class="speaker-role">Artysta dźwiękowy, panGenerator, UMFC (Guthman Competition)</div>
-              <div class="speaker-topic-tag">Pokaz: AI i sztuka generatywna — sprawczość i namacalność instrumentów</div>
-              <p class="speaker-bio-snip">Twórca niezwykłych obiektów dźwiękowych, laureat Paszportu Polityki i wyróżnienia Ars Electronica.</p>
+              <div class="speaker-topic-tag">Pokaz: AI i sztuka generatywna — sprawczość i namacalność instrumentów
+              </div>
+              <p class="speaker-bio-snip">Twórca niezwykłych obiektów dźwiękowych, laureat Paszportu Polityki i
+                wyróżnienia Ars Electronica.</p>
               <div class="speaker-card-footer">
                 <span class="btn-read-bio">Pełny biogram <span aria-hidden="true">→</span></span>
               </div>
@@ -1080,7 +1195,8 @@
               <h3 class="speaker-name">Piotr Majewski</h3>
               <div class="speaker-role">Prezes Polskiego Stowarzyszenia Jazzowego, dziennikarz RDC</div>
               <div class="speaker-topic-tag">Prowadzenie konferencji & moderacja Wielkiej Debaty Mediów i AI</div>
-              <p class="speaker-bio-snip">Głos polskiego jazzu i niestrudzony propagator muzyki improwizowanej w Polskim Radiu RDC.</p>
+              <p class="speaker-bio-snip">Głos polskiego jazzu i niestrudzony propagator muzyki improwizowanej w Polskim
+                Radiu RDC.</p>
               <div class="speaker-card-footer">
                 <span class="btn-read-bio">Pełny biogram <span aria-hidden="true">→</span></span>
               </div>
@@ -1090,7 +1206,8 @@
           <!-- 16. Julianna Seidler-Smuga -->
           <article class="speaker-card" data-speaker-id="julianna-smuga" data-category="music" tabindex="0">
             <div class="speaker-image-wrapper">
-              <img src="assets/speakers/Julianna Seidler-Smuga.jpg" alt="Julianna Seidler-Smuga" class="speaker-img" loading="lazy">
+              <img src="assets/speakers/Julianna Seidler-Smuga.jpg" alt="Julianna Seidler-Smuga" class="speaker-img"
+                loading="lazy">
               <div class="speaker-overlay"></div>
               <span class="speaker-badge">Koncert Finałowy</span>
             </div>
@@ -1098,7 +1215,8 @@
               <h3 class="speaker-name">Julianna Seidler-Smuga</h3>
               <div class="speaker-role">Perkusistka, marimbistka, artystka handpanu</div>
               <div class="speaker-topic-tag">Wykonanie: Marimba, ksylofon i handpan w spektaklu LIRAEL-9</div>
-              <p class="speaker-bio-snip">Solistka i kameralistka wirtuozowsko łącząca instrumenty sztabkowe z mistycznymi dźwiękami handpanu.</p>
+              <p class="speaker-bio-snip">Solistka i kameralistka wirtuozowsko łącząca instrumenty sztabkowe z
+                mistycznymi dźwiękami handpanu.</p>
               <div class="speaker-card-footer">
                 <span class="btn-read-bio">Pełny biogram <span aria-hidden="true">→</span></span>
               </div>
@@ -1116,7 +1234,8 @@
               <h3 class="speaker-name">Bartek Miler</h3>
               <div class="speaker-role">Wirtuoz perkusji, marimbista, laureat międzynarodowych nagród</div>
               <div class="speaker-topic-tag">Wykonanie: Marimba i perkusjonalia w koncercie LIRAEL-9</div>
-              <p class="speaker-bio-snip">Jeden z najbardziej dynamicznych polskich perkusistów młodego pokolenia występujący w Europie i USA.</p>
+              <p class="speaker-bio-snip">Jeden z najbardziej dynamicznych polskich perkusistów młodego pokolenia
+                występujący w Europie i USA.</p>
               <div class="speaker-card-footer">
                 <span class="btn-read-bio">Pełny biogram <span aria-hidden="true">→</span></span>
               </div>
@@ -1134,7 +1253,8 @@
               <h3 class="speaker-name">Kinga Rolka</h3>
               <div class="speaker-role">Rytmiczka, pedagożka, Akademia Muzyczna w Krakowie</div>
               <div class="speaker-topic-tag">Choreografia grupy tanecznej w multimedialnym widowisku LIRAEL-9</div>
-              <p class="speaker-bio-snip">Specjalistka ekspresji scenicznej, łączy ruch ciała z improwizacją i generatywnymi projekcjami.</p>
+              <p class="speaker-bio-snip">Specjalistka ekspresji scenicznej, łączy ruch ciała z improwizacją i
+                generatywnymi projekcjami.</p>
               <div class="speaker-card-footer">
                 <span class="btn-read-bio">Pełny biogram <span aria-hidden="true">→</span></span>
               </div>
@@ -1155,7 +1275,9 @@
             <span class="concert-badge">Finał Konferencji • Godz. 20:00</span>
             <h2 class="concert-title">Multimedialny Spektakl: LIRAEL-9</h2>
             <p class="concert-desc">
-              Kulminacyjny punkt IV edycji Futuropolis. Dziewięcioczęściowy dialog człowieka ze sztuczną inteligencją, łączący żywy puls perkusji akustycznej i elektronicznej z partiami marimb, wibrafonu, generatywnym wideo oraz ekspresją współczesnego tańca.
+              Kulminacyjny punkt IV edycji Futuropolis. Dziewięcioczęściowy dialog człowieka ze sztuczną inteligencją,
+              łączący żywy puls perkusji akustycznej i elektronicznej z partiami marimb, wibrafonu, generatywnym wideo
+              oraz ekspresją współczesnego tańca.
             </p>
 
             <div class="concert-features-list">
@@ -1185,7 +1307,8 @@
               </div>
             </div>
 
-            <a href="https://goingapp.pl/wydarzenie/iv-konferencja-ai-w-muzyce-futuropolis-28-11/warszawa-listopad-2026" target="_blank" rel="noopener noreferrer" class="btn-primary" id="concert-ticket-cta">
+            <a href="https://goingapp.pl/wydarzenie/iv-konferencja-ai-w-muzyce-futuropolis-28-11/warszawa-listopad-2026"
+              target="_blank" rel="noopener noreferrer" class="btn-primary" id="concert-ticket-cta">
               <span>Zarezerwuj Bilet z Wstępem na Koncert</span>
               <span aria-hidden="true">↗</span>
             </a>
@@ -1193,7 +1316,8 @@
 
           <div class="concert-visual">
             <div class="concert-graphic-glow"></div>
-            <img src="assets/branding/lirael-graphic.png" alt="Grafika Lirael-9 Futuropolis" class="concert-graphic-img">
+            <img src="assets/branding/lirael-graphic.png" alt="Grafika Lirael-9 Futuropolis"
+              class="concert-graphic-img">
           </div>
         </div>
       </div>
@@ -1208,7 +1332,8 @@
           <span class="section-tag">Fotorelacja</span>
           <h2 class="section-title">Atmosfera Konferencji Futuropolis</h2>
           <p class="section-desc">
-            Zobacz kadry z poprzednich edycji na Uniwersytecie Muzycznym Fryderyka Chopina i w klubie MOXO. Połączenie pasji artystycznej, naukowych dyskusji i zachwytu publiczności.
+            Zobacz kadry z poprzednich edycji na Uniwersytecie Muzycznym Fryderyka Chopina i w klubie MOXO. Połączenie
+            pasji artystycznej, naukowych dyskusji i zachwytu publiczności.
           </p>
         </div>
 
@@ -1274,7 +1399,8 @@
           <span class="section-tag">Wejściówki na Going</span>
           <h2 class="section-title">Wybierz Swój Bilet</h2>
           <p class="section-desc">
-            Bilety dostępne są za pośrednictwem oficjalnej platformy GoingApp. Zapewnij sobie miejsce na 11 godzin prelekcji, pokazów technologicznych i koncertu finałowego.
+            Bilety dostępne są za pośrednictwem oficjalnej platformy GoingApp. Zapewnij sobie miejsce na 11 godzin
+            prelekcji, pokazów technologicznych i koncertu finałowego.
           </p>
         </div>
 
@@ -1309,7 +1435,8 @@
               </li>
             </ul>
 
-            <a href="https://goingapp.pl/wydarzenie/iv-konferencja-ai-w-muzyce-futuropolis-28-11/warszawa-listopad-2026" target="_blank" rel="noopener noreferrer" class="btn-buy-ticket">
+            <a href="https://goingapp.pl/wydarzenie/iv-konferencja-ai-w-muzyce-futuropolis-28-11/warszawa-listopad-2026"
+              target="_blank" rel="noopener noreferrer" class="btn-buy-ticket">
               Kup Bilet Studencki
             </a>
           </article>
@@ -1348,7 +1475,8 @@
               </li>
             </ul>
 
-            <a href="https://goingapp.pl/wydarzenie/iv-konferencja-ai-w-muzyce-futuropolis-28-11/warszawa-listopad-2026" target="_blank" rel="noopener noreferrer" class="btn-buy-ticket">
+            <a href="https://goingapp.pl/wydarzenie/iv-konferencja-ai-w-muzyce-futuropolis-28-11/warszawa-listopad-2026"
+              target="_blank" rel="noopener noreferrer" class="btn-buy-ticket">
               Kup Bilet Standard
             </a>
           </article>
@@ -1386,7 +1514,8 @@
               </li>
             </ul>
 
-            <a href="https://goingapp.pl/wydarzenie/iv-konferencja-ai-w-muzyce-futuropolis-28-11/warszawa-listopad-2026" target="_blank" rel="noopener noreferrer" class="btn-buy-ticket">
+            <a href="https://goingapp.pl/wydarzenie/iv-konferencja-ai-w-muzyce-futuropolis-28-11/warszawa-listopad-2026"
+              target="_blank" rel="noopener noreferrer" class="btn-buy-ticket">
               Kup Pakiet VIP
             </a>
           </article>
@@ -1418,7 +1547,8 @@
                 <div class="venue-detail-icon">🚇</div>
                 <div class="venue-detail-text">
                   <h4>Metro & Komunikacja Miejska</h4>
-                  <p>Szybki dojazd ze stacji Metro Służew lub Wilanowska (autobusy 189, 401, 136, 138). Przystanek: Rzymowskiego / Cybernetyki.</p>
+                  <p>Szybki dojazd ze stacji Metro Służew lub Wilanowska (autobusy 189, 401, 136, 138). Przystanek:
+                    Rzymowskiego / Cybernetyki.</p>
                 </div>
               </div>
 
@@ -1426,7 +1556,8 @@
                 <div class="venue-detail-icon">🚗</div>
                 <div class="venue-detail-text">
                   <h4>Parking i Samochód</h4>
-                  <p>Dostępne bezpłatne miejsca postojowe wzdłuż ul. Rzymowskiego oraz parking podziemny w Galerii Mokotów (5 minut pieszo).</p>
+                  <p>Dostępne bezpłatne miejsca postojowe wzdłuż ul. Rzymowskiego oraz parking podziemny w Galerii
+                    Mokotów (5 minut pieszo).</p>
                 </div>
               </div>
 
@@ -1434,24 +1565,23 @@
                 <div class="venue-detail-icon">♿</div>
                 <div class="venue-detail-text">
                   <h4>Dostępność Architektoniczna</h4>
-                  <p>Obiekt w pełni przystosowany dla osób z niepełnosprawnościami (windy, podjazdy, pętla indukcyjna w sali widowiskowej).</p>
+                  <p>Obiekt w pełni przystosowany dla osób z niepełnosprawnościami (windy, podjazdy, pętla indukcyjna w
+                    sali widowiskowej).</p>
                 </div>
               </div>
             </div>
 
-            <a href="https://maps.google.com/?q=Dom+Kultury+KADR+Rzymowskiego+32+Warszawa" target="_blank" rel="noopener noreferrer" class="btn-cyber-outline" style="align-self: flex-start;">
+            <a href="https://maps.google.com/?q=Dom+Kultury+KADR+Rzymowskiego+32+Warszawa" target="_blank"
+              rel="noopener noreferrer" class="btn-cyber-outline" style="align-self: flex-start;">
               <span>Otwórz w Google Maps</span>
               <span aria-hidden="true">↗</span>
             </a>
           </div>
 
           <div class="venue-map-wrapper">
-            <iframe 
-              class="venue-map-iframe"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2446.732386235452!2d20.999651576922576!3d52.175549061619625!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471932d431c3bf65%3A0xbd769255a2c4e209!2sDom%20Kultury%20KADR!5e0!3m2!1spl!2spl!4v1710000000000!5m2!1spl!2spl" 
-              allowfullscreen="" 
-              loading="lazy" 
-              referrerpolicy="no-referrer-when-downgrade"
+            <iframe class="venue-map-iframe"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2446.732386235452!2d20.999651576922576!3d52.175549061619625!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471932d431c3bf65%3A0xbd769255a2c4e209!2sDom%20Kultury%20KADR!5e0!3m2!1spl!2spl!4v1710000000000!5m2!1spl!2spl"
+              allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
               title="Mapa dojazdu do Domu Kultury KADR w Warszawie">
             </iframe>
           </div>
@@ -1480,7 +1610,10 @@
             </button>
             <div class="faq-answer">
               <p>
-                Konferencja ma charakter ściśle interdyscyplinarny. Zapraszamy muzyków, kompozytorów, producentów dźwięku, edukatorów, studentów kierunków artystycznych i technicznych, inżynierów AI, prawników, przedstawicieli mediów oraz wszystkich pasjonatów poszukujących rzetelnej wiedzy o wpływie sztucznej inteligencji na kulturę i sztukę.
+                Konferencja ma charakter ściśle interdyscyplinarny. Zapraszamy muzyków, kompozytorów, producentów
+                dźwięku, edukatorów, studentów kierunków artystycznych i technicznych, inżynierów AI, prawników,
+                przedstawicieli mediów oraz wszystkich pasjonatów poszukujących rzetelnej wiedzy o wpływie sztucznej
+                inteligencji na kulturę i sztukę.
               </p>
             </div>
           </article>
@@ -1492,7 +1625,9 @@
             </button>
             <div class="faq-answer">
               <p>
-                Nie! Program został skomponowany tak, aby zrównoważyć głębokie spojrzenie technologiczne z praktyką sceniczną, wrażliwością artystyczną i refleksją kulturową. Każdy wykład i pokaz tłumaczony jest przystępnym, żywym językiem z perspektywy praktyka.
+                Nie! Program został skomponowany tak, aby zrównoważyć głębokie spojrzenie technologiczne z praktyką
+                sceniczną, wrażliwością artystyczną i refleksją kulturową. Każdy wykład i pokaz tłumaczony jest
+                przystępnym, żywym językiem z perspektywy praktyka.
               </p>
             </div>
           </article>
@@ -1504,7 +1639,8 @@
             </button>
             <div class="faq-answer">
               <p>
-                Tak! Każdy bilet konferencyjny (Studencki, Standard oraz VIP) upoważnia do wstępu na wszystkie 7 Aktów, w tym na wieczorny multimedialny koncert finałowy LIRAEL-9 o godzinie 20:00.
+                Tak! Każdy bilet konferencyjny (Studencki, Standard oraz VIP) upoważnia do wstępu na wszystkie 7 Aktów,
+                w tym na wieczorny multimedialny koncert finałowy LIRAEL-9 o godzinie 20:00.
               </p>
             </div>
           </article>
@@ -1516,7 +1652,9 @@
             </button>
             <div class="faq-answer">
               <p>
-                Konferencja odbywa się stacjonarnie w Domu Kultury KADR, co pozwala na pełne doświadczenie akustyki, instrumentów i bezpośredniego networkingu. Zapisy wideo i reportaże zostaną opublikowane po zakończeniu edycji na kanałach YouTube i stronie Futuropolis.
+                Konferencja odbywa się stacjonarnie w Domu Kultury KADR, co pozwala na pełne doświadczenie akustyki,
+                instrumentów i bezpośredniego networkingu. Zapisy wideo i reportaże zostaną opublikowane po zakończeniu
+                edycji na kanałach YouTube i stronie Futuropolis.
               </p>
             </div>
           </article>
@@ -1534,11 +1672,13 @@
             <span class="section-tag" style="align-self: flex-start;">Bądźmy w Kontakcie</span>
             <h2 class="contact-info-title">Masz Pytania Dotyczące Konferencji?</h2>
             <p class="contact-info-desc">
-              Chcesz zgłosić współpracę medialną, instytucjonalną lub zapytać o bilety grupowe? Napisz do nas bezpośrednio lub skorzystaj z szybkiego czatu WhatsApp.
+              Chcesz zgłosić współpracę medialną, instytucjonalną lub zapytać o bilety grupowe? Napisz do nas
+              bezpośrednio lub skorzystaj z szybkiego czatu WhatsApp.
             </p>
 
             <div class="contact-channels">
-              <a href="https://wa.me/48784691601?text=Dzie%C5%84%20dobry,%20chcia%C5%82bym%20zapyta%C4%87%20o%20konferencj%C4%99%20Futuropolis" target="_blank" rel="noopener noreferrer" class="channel-link">
+              <a href="https://wa.me/48784691601?text=Dzie%C5%84%20dobry,%20chcia%C5%82bym%20zapyta%C4%87%20o%20konferencj%C4%99%20Futuropolis"
+                target="_blank" rel="noopener noreferrer" class="channel-link">
                 <span class="channel-icon">💬</span>
                 <div>
                   <div class="channel-label">Szybki kontakt WhatsApp</div>
@@ -1567,20 +1707,24 @@
           <form class="contact-form" id="conference-contact-form">
             <div class="form-group">
               <label for="contact-name" class="form-label">Twoje Imię i Nazwisko *</label>
-              <input type="text" id="contact-name" name="name" class="form-input" placeholder="np. Jan Kowalski" required>
+              <input type="text" id="contact-name" name="name" class="form-input" placeholder="np. Jan Kowalski"
+                required>
             </div>
 
             <div class="form-group">
               <label for="contact-email" class="form-label">Adres E-mail *</label>
-              <input type="email" id="contact-email" name="email" class="form-input" placeholder="np. jan@example.com" required>
+              <input type="email" id="contact-email" name="email" class="form-input" placeholder="np. jan@example.com"
+                required>
             </div>
 
             <div class="form-group">
               <label for="contact-message" class="form-label">Treść Wiadomości *</label>
-              <textarea id="contact-message" name="message" class="form-textarea" placeholder="Napisz, w czym możemy Ci pomóc..." required></textarea>
+              <textarea id="contact-message" name="message" class="form-textarea"
+                placeholder="Napisz, w czym możemy Ci pomóc..." required></textarea>
             </div>
 
-            <div id="form-feedback-alert" style="display:none; font-size:0.9rem; font-weight:600; margin-top:4px;"></div>
+            <div id="form-feedback-alert" style="display:none; font-size:0.9rem; font-weight:600; margin-top:4px;">
+            </div>
 
             <button type="submit" class="btn-submit" id="contact-submit-btn">
               <span>Wyślij Wiadomość</span>
@@ -1601,7 +1745,8 @@
         <div class="footer-brand">
           <img src="assets/branding/futuropolis-logo.png" alt="Futuropolis Logo" style="height: 42px;">
           <p>
-            <strong>FUTUROPOLIS</strong> to ogólnopolska platforma artystyczno-naukowa badająca relacje człowieka, sztuki i sztucznej inteligencji.
+            <strong>FUTUROPOLIS</strong> to ogólnopolska platforma artystyczno-naukowa badająca relacje człowieka,
+            sztuki i sztucznej inteligencji.
           </p>
         </div>
 
@@ -1655,11 +1800,12 @@
         <button type="button" class="modal-close-btn" id="modal-close-btn" aria-label="Zamknij okno">✕</button>
       </div>
       <div class="modal-body">
-        <img src="assets/branding/futuropolis-logo.png" alt="Zdjęcie prelegenta" class="modal-speaker-img" id="modal-speaker-img">
+        <img src="assets/branding/futuropolis-logo.png" alt="Zdjęcie prelegenta" class="modal-speaker-img"
+          id="modal-speaker-img">
         <div>
           <h3 class="modal-speaker-name" id="modal-speaker-name">Imię i Nazwisko</h3>
           <div class="modal-speaker-role" id="modal-speaker-role">Rola / Specjalizacja</div>
-          
+
           <div class="modal-topic-box">
             <div class="modal-topic-label">Temat wystąpienia</div>
             <div class="modal-topic-text" id="modal-topic-text">Temat wykładu lub pokazu</div>
@@ -1680,7 +1826,9 @@
   </dialog>
 
   <!-- WhatsApp Floating Widget -->
-  <a href="https://wa.me/48784691601?text=Dzie%C5%84%20dobry,%20chcia%C5%82bym%20zapyta%C4%87%20o%20konferencj%C4%99%20Futuropolis" target="_blank" rel="noopener noreferrer" class="whatsapp-float-btn" id="whatsapp-quick-btn" aria-label="Czat WhatsApp z organizatorem">
+  <a href="https://wa.me/48784691601?text=Dzie%C5%84%20dobry,%20chcia%C5%82bym%20zapyta%C4%87%20o%20konferencj%C4%99%20Futuropolis"
+    target="_blank" rel="noopener noreferrer" class="whatsapp-float-btn" id="whatsapp-quick-btn"
+    aria-label="Czat WhatsApp z organizatorem">
     <span class="whatsapp-icon" aria-hidden="true">💬</span>
     <span class="whatsapp-text">Czat WhatsApp</span>
   </a>
@@ -1693,4 +1841,5 @@
   <!-- JavaScript -->
   <script src="js/main.js"></script>
 </body>
+
 </html>

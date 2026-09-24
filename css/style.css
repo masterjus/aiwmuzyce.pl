@@ -563,6 +563,10 @@ button {
   justify-content: center;
   width: 36px;
   height: 36px;
+  min-width: 36px;
+  min-height: 36px;
+  max-width: 36px;
+  max-height: 36px;
   border-radius: 50%;
   background: var(--bg-glass-card);
   border: 1px solid var(--border-glass);
@@ -571,6 +575,7 @@ button {
   transition: all var(--transition-fast);
   cursor: pointer;
   flex-shrink: 0;
+  aspect-ratio: 1 / 1;
 }
 
 .btn-theme-nav:hover {
@@ -1515,6 +1520,10 @@ button {
 .act-toggle-btn {
   width: 36px;
   height: 36px;
+  min-width: 36px;
+  min-height: 36px;
+  max-width: 36px;
+  max-height: 36px;
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid var(--border-subtle);
@@ -1522,6 +1531,10 @@ button {
   align-items: center;
   justify-content: center;
   color: var(--text-muted);
+  flex-shrink: 0;
+  aspect-ratio: 1 / 1;
+  font-size: 0.85rem;
+  line-height: 1;
   transition: transform var(--transition-fast), background var(--transition-fast);
 }
 
@@ -2227,14 +2240,22 @@ button {
 }
 
 .faq-icon {
-  width: 30px;
-  height: 30px;
+  width: 32px;
+  height: 32px;
+  min-width: 32px;
+  min-height: 32px;
+  max-width: 32px;
+  max-height: 32px;
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.05);
   display: flex;
   align-items: center;
   justify-content: center;
   color: var(--text-muted);
+  flex-shrink: 0;
+  aspect-ratio: 1 / 1;
+  font-size: 0.8rem;
+  line-height: 1;
   transition: transform var(--transition-fast), background var(--transition-fast);
 }
 
@@ -3010,14 +3031,46 @@ dialog.gallery-modal::backdrop {
   .whatsapp-float-btn {
     bottom: 20px;
     right: 20px;
-    padding: 14px;
+    width: 52px;
+    height: 52px;
+    min-width: 52px;
+    min-height: 52px;
+    max-width: 52px;
+    max-height: 52px;
+    padding: 0;
     border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    aspect-ratio: 1 / 1;
+    flex-shrink: 0;
+    box-shadow: 0 8px 25px rgba(37, 211, 102, 0.6);
+  }
+  .whatsapp-float-btn .whatsapp-icon {
+    font-size: 1.55rem;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   .back-to-top-btn {
     bottom: 20px;
     left: 20px;
-    width: 42px;
-    height: 42px;
+    width: 44px;
+    height: 44px;
+    min-width: 44px;
+    min-height: 44px;
+    max-width: 44px;
+    max-height: 44px;
+    padding: 0;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    aspect-ratio: 1 / 1;
+    flex-shrink: 0;
+    font-size: 0.9rem;
+    line-height: 1;
   }
 }
 
